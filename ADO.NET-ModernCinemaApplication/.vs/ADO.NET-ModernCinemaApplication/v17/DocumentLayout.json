@@ -1,0 +1,464 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\ado.net-moderncinemaapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|solutionrelative:ado.net-moderncinemaapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\ado.net-moderncinemaapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication.csproj|solutionrelative:ado.net-moderncinemaapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\ado.net-moderncinemaapplication\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|solutionrelative:ado.net-moderncinemaapplication\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\data\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\data\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\screeningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\screeningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\personrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\ado.net-moderncinemaapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8887B3A-2E70-454C-8C04-CB61665A2BC4}|ADO.NET-ModernCinemaApplication\\GUI.csproj|solutionrelative:ado.net-moderncinemaapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\enums\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\enums\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\enums\\moviecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\enums\\moviecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\enums\\sex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\enums\\sex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|c:\\forkrepo\\ado.net-classes\\ado.net-moderncinemaapplication\\backend\\entities\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{829CF310-3968-44F6-BA35-A9F050E18B44}|Backend\\Backend.csproj|solutionrelative:backend\\entities\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Reservation.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Reservation.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Reservation.cs",
+              "RelativeToolTip": "Backend\\Entities\\Reservation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:40.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Person.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Person.cs",
+              "RelativeToolTip": "Backend\\Entities\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:43.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbConnectionFactory.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Data\\DbConnectionFactory.cs",
+              "RelativeDocumentMoniker": "Backend\\Data\\DbConnectionFactory.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Data\\DbConnectionFactory.cs",
+              "RelativeToolTip": "Backend\\Data\\DbConnectionFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:31:32.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\App.config",
+              "RelativeDocumentMoniker": "Backend\\App.config",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\App.config",
+              "RelativeToolTip": "Backend\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-20T14:38:17.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:30:04.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:29:33.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Projekt]",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "RelativeDocumentMoniker": "ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Form1.cs [Projekt]",
+              "RelativeToolTip": "ADO.NET-ModernCinemaApplication\\Form1.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:27:23.036Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "RelativeDocumentMoniker": "ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "RelativeToolTip": "ADO.NET-ModernCinemaApplication\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:38:14.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GUI",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\GUI.csproj",
+              "RelativeDocumentMoniker": "ADO.NET-ModernCinemaApplication\\GUI.csproj",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\GUI.csproj",
+              "RelativeToolTip": "ADO.NET-ModernCinemaApplication\\GUI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-20T13:39:36.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Room.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Room.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Room.cs",
+              "RelativeToolTip": "Backend\\Entities\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:37.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\User.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\User.cs",
+              "RelativeToolTip": "Backend\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:17.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Screening.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Screening.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Screening.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Screening.cs",
+              "RelativeToolTip": "Backend\\Entities\\Screening.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:32.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Movie.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Movie.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Movie.cs",
+              "RelativeToolTip": "Backend\\Entities\\Movie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:48.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ScreeningRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\ScreeningRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\ScreeningRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\ScreeningRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\ScreeningRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:09:38.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:09:23.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PersonRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\PersonRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\PersonRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\PersonRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\PersonRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:09:10.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MovieRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\MovieRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\MovieRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\MovieRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\MovieRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:08:59.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "Backend\\Repositories\\MessageRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Repositories\\MessageRepository.cs",
+              "RelativeToolTip": "Backend\\Repositories\\MessageRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T14:10:16.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Program.cs",
+              "RelativeDocumentMoniker": "ADO.NET-ModernCinemaApplication\\Program.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\ADO.NET-ModernCinemaApplication\\Program.cs",
+              "RelativeToolTip": "ADO.NET-ModernCinemaApplication\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:20:26.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Message.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Message.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Message.cs",
+              "RelativeToolTip": "Backend\\Entities\\Message.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:51.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RoomType.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\RoomType.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Enums\\RoomType.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\RoomType.cs",
+              "RelativeToolTip": "Backend\\Entities\\Enums\\RoomType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:43:05.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Role.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Enums\\Role.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Role.cs",
+              "RelativeToolTip": "Backend\\Entities\\Enums\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:43:08.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MovieCategory.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\MovieCategory.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Enums\\MovieCategory.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\MovieCategory.cs",
+              "RelativeToolTip": "Backend\\Entities\\Enums\\MovieCategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:43:10.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Sex.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Sex.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Enums\\Sex.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Sex.cs",
+              "RelativeToolTip": "Backend\\Entities\\Enums\\Sex.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:43:02.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Status.cs",
+              "RelativeDocumentMoniker": "Backend\\Entities\\Enums\\Status.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\ADO.NET-ModernCinemaApplication\\Backend\\Entities\\Enums\\Status.cs",
+              "RelativeToolTip": "Backend\\Entities\\Enums\\Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:42:56.12Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
