@@ -4,10 +4,10 @@ using Logic.Services.Interfaces;
 
 namespace OrderManagerApp
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly ICustomerService _customerService;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             _customerService = new CustomerService();
@@ -15,9 +15,14 @@ namespace OrderManagerApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Customer> customers = _customerService.GetAllCustomers();
+            /*List<Customer> customers = _customerService.GetAllCustomers();
 
-            customers.ForEach(customer => { MessageBox.Show(customer.FirstName); });
+            customers.ForEach(customer => { MessageBox.Show(customer.FirstName); });*/
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

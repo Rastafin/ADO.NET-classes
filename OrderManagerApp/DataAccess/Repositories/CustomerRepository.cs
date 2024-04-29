@@ -3,6 +3,7 @@ using DataAccess.Models;
 using DataAccess.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -23,17 +24,20 @@ namespace DataAccess.Repositories
                 connection.Open();
                 string sql = "SELECT * FROM Customers";
 
-                using(var command = new SqlCommand(sql, connection))
-                using(var reader = command.ExecuteReader())
+                using (var command = new SqlCommand(sql, connection))
                 {
-                    while (reader.Read())
-                    {
-                        int id = reader.GetInt32(reader.GetOrdinal("Id"));
-                        string firstName = reader.GetString(reader.GetOrdinal("FirstName"));
-                        string lastName = reader.GetString(reader.GetOrdinal("LastName"));
-                        string email = reader.GetString(reader.GetOrdinal("Email"));
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    adapter.Fill(dataSet, "Customers");
 
-                        Customer customer = new(firstName, lastName, email);
+                    foreach (DataRow row in dataSet.Tables[0].Rows)
+                    {
+                        int id = (int)row["Id"];
+                        string firstName = (string)row["FirstName"];
+                        string lastName = (string)row["LastName"];
+                        string email = (string)row["Email"];
+
+                        Customer customer = new Customer(firstName, lastName, email);
                         customers.Add(customer);
                     }
                 }
