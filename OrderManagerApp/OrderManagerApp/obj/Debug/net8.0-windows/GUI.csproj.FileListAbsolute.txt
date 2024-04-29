@@ -29,3 +29,4 @@ C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-win
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.csproj.Up2Date
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\bin\Debug\net8.0-windows\GUI.dll.config
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\OrderManagerApp.MainForm.resources
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.CustomersForm.resources

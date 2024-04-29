@@ -1,4 +1,5 @@
 using DataAccess.Models;
+using GUI;
 using Logic.Services;
 using Logic.Services.Interfaces;
 
@@ -15,14 +16,19 @@ namespace OrderManagerApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*List<Customer> customers = _customerService.GetAllCustomers();
 
-            customers.ForEach(customer => { MessageBox.Show(customer.FirstName); });*/
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonCustomers_Click(object sender, EventArgs e)
+        {
+            CustomersForm customersForm = new();
+            Hide();
+            customersForm.ShowDialog();
         }
     }
 }

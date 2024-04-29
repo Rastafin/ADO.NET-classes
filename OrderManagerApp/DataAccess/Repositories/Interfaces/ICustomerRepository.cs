@@ -10,5 +10,6 @@ namespace DataAccess.Repositories.Interfaces
     public interface ICustomerRepository
     {
         List<Customer> GetAllCustomers();
+        void AddCustomer(Customer customer);
     }
 }

@@ -16,7 +16,26 @@ namespace Logic.Services
 
         public List<Customer> GetAllCustomers()
         {
-            return _customerRepository.GetAllCustomers();
+            try
+            {
+                return _customerRepository.GetAllCustomers();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("An error occurred in GetAllCustomers method. " + ex.Message);
+            }
+        }
+
+        public void AddCustomer(Customer customer)
+        {
+            try
+            {
+                _customerRepository.AddCustomer(customer);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("An error occurred in AddCustomer method. " + ex.Message);
+            }
         }
     }
 }

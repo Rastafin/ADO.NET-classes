@@ -10,5 +10,6 @@ namespace Logic.Services.Interfaces
     public interface ICustomerService
     {
         List<Customer> GetAllCustomers();
+        void AddCustomer(Customer customer);
     }
 }

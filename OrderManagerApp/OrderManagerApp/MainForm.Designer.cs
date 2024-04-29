@@ -58,6 +58,7 @@
             buttonCustomers.TabIndex = 1;
             buttonCustomers.Text = "CUSTOMERS";
             buttonCustomers.UseVisualStyleBackColor = false;
+            buttonCustomers.Click += buttonCustomers_Click;
             // 
             // buttonProducts
             // 

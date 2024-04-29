@@ -19,31 +19,72 @@ namespace DataAccess.Repositories
         {
             List<Customer> customers = new List<Customer>();
 
-            using(var connection = _connectionFactory.CreateConnection())
+            try
             {
-                connection.Open();
-                string sql = "SELECT * FROM Customers";
-
-                using (var command = new SqlCommand(sql, connection))
+                using (var connection = _connectionFactory.CreateConnection())
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataSet dataSet = new DataSet();
-                    adapter.Fill(dataSet, "Customers");
+                    connection.Open();
+                    string sql = "SELECT * FROM Customers";
 
-                    foreach (DataRow row in dataSet.Tables[0].Rows)
+                    using (var command = new SqlCommand(sql, connection))
                     {
-                        int id = (int)row["Id"];
-                        string firstName = (string)row["FirstName"];
-                        string lastName = (string)row["LastName"];
-                        string email = (string)row["Email"];
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Customers");
 
-                        Customer customer = new Customer(firstName, lastName, email);
-                        customers.Add(customer);
+                        foreach (DataRow row in dataSet.Tables[0].Rows)
+                        {
+                            int id = (int)row["Id"];
+                            string firstName = (string)row["FirstName"];
+                            string lastName = (string)row["LastName"];
+                            string email = (string)row["Email"];
+
+                            Customer customer = new Customer(firstName, lastName, email);
+                            customers.Add(customer);
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get  all customers. " + ex.Message);
+            }
 
             return customers;
+        }
+
+        public void AddCustomer(Customer customer)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Customers";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Customers");
+
+                        DataRow newRow = dataSet.Tables[0].NewRow();
+                        newRow["FirstName"] = customer.FirstName;
+                        newRow["LastName"] = customer.LastName;
+                        newRow["Email"] = customer.Email;
+
+                        dataSet.Tables[0].Rows.Add(newRow);
+
+                        SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                        adapter.Update(dataSet, "Customers");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to add new customer. " + ex.Message);
+            }
         }
     }
 }
