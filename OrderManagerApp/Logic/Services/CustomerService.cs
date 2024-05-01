@@ -37,5 +37,29 @@ namespace Logic.Services
                 throw new Exception("An error occurred in AddCustomer method. " + ex.Message);
             }
         }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            try
+            {
+                _customerRepository.UpdateCustomer(customer);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in UpdateCustomer method. " + ex.Message);
+            }
+        }
+
+        public void DeleteCustomer(int customerId)
+        {
+            try
+            {
+                _customerRepository.DeleteCustomer(customerId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in DeleteCustomer method. " + ex.Message);
+            }
+        }
     }
 }
