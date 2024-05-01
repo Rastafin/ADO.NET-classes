@@ -1,0 +1,14 @@
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll.config
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
