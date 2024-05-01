@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "OrderManagerApp\GUI.csproj", "{5FC2B195-607A-4A86-80D0-8054698C2761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{3E81884D-B606-47AF-A9E1-885A3A8820C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{990A3CF4-EEDD-4D49-A741-689B7703D136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FC2B195-607A-4A86-80D0-8054698C2761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC2B195-607A-4A86-80D0-8054698C2761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC2B195-607A-4A86-80D0-8054698C2761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC2B195-607A-4A86-80D0-8054698C2761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E81884D-B606-47AF-A9E1-885A3A8820C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E81884D-B606-47AF-A9E1-885A3A8820C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E81884D-B606-47AF-A9E1-885A3A8820C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E81884D-B606-47AF-A9E1-885A3A8820C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B5437F3-ABBD-4A08-9811-7A7F78CB6EA2}
+	EndGlobalSection
+EndGlobal

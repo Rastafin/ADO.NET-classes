@@ -1,0 +1,17 @@
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\Logic.deps.json
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\Logic.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\Logic.pdb
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\DataAccess.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\DataAccess.pdb
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\DataAccess.dll.config
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.AssemblyReference.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.AssemblyInfoInputs.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.AssemblyInfo.cs
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.CoreCompileInputs.cache
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.sourcelink.json
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.Up2Date
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\refint\Logic.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.pdb
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\ref\Logic.dll
