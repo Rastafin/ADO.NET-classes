@@ -33,7 +33,7 @@ namespace GUI
                 dataGridViewCustomers.Columns["FirstName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewCustomers.Columns["LastName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -58,25 +58,133 @@ namespace GUI
 
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
-            if(textBoxFirstName.Text == "" || textBoxLastName.Text == "" || textBoxEmail.Text == "")
+            if (textBoxFirstName.Text == "" || textBoxLastName.Text == "" || textBoxEmail.Text == "")
             {
-                MessageBox.Show("Not every pool of form is filled.", "Warning", MessageBoxButtons.OK);
+                MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK);
                 return;
             }
 
             try
             {
                 _customerService.AddCustomer(new Customer(
-                textBoxFirstName.Text,
-                textBoxLastName.Text,
-                textBoxEmail.Text));
+                    textBoxFirstName.Text,
+                    textBoxLastName.Text,
+                    textBoxEmail.Text));
+
+                refreshDGV();
+
+                MessageBox.Show("Customer added successfully.", "Message", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridViewCustomers_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewCustomers.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridViewCustomers.SelectedRows[0];
+
+                if (selectedRow.Cells["FirstName"].Value != null &&
+                    selectedRow.Cells["LastName"].Value != null &&
+                    selectedRow.Cells["Email"].Value != null)
+                {
+                    string firstName = selectedRow.Cells["FirstName"].Value.ToString()!;
+                    string lastName = selectedRow.Cells["LastName"].Value.ToString()!;
+                    string email = selectedRow.Cells["Email"].Value.ToString()!;
+
+                    textBoxEditFirstName.Text = firstName;
+                    textBoxEditLastName.Text = lastName;
+                    textBoxEditEmail.Text = email;
+                }
+                else
+                {
+                    textBoxEditFirstName.Text = string.Empty;
+                    textBoxEditLastName.Text = string.Empty;
+                    textBoxEditEmail.Text = string.Empty;
+                }
+            }
+        }
+
+        private void buttonEditCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewCustomers.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridViewCustomers.SelectedRows[0];
+
+                    if (selectedRow.Cells["Id"].Value == null)
+                    {
+                        throw new Exception("Selected user data is incomplete.");
+                    }
+
+                    int customerId = (int)selectedRow.Cells["Id"].Value;
+                    string firstName = textBoxEditFirstName.Text;
+                    string lastName = textBoxEditLastName.Text;
+                    string email = textBoxEditEmail.Text;
+
+                    if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
+                    {
+                        MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                    if (customerId < 1)
+                    {
+                        throw new Exception("Invalid customer ID.");
+                    }
+
+                    _customerService.UpdateCustomer(new Customer(
+                        customerId,
+                        firstName,
+                        lastName,
+                        email));
+
+                    refreshDGV();
+
+                    MessageBox.Show("Customer updated successfully.", "Message", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewCustomers.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridViewCustomers.SelectedRows[0];
+
+                    if (selectedRow.Cells["Id"].Value == null)
+                    {
+                        throw new Exception("Selected user data is incomplete.");
+                    }
+
+                    int customerId = (int)selectedRow.Cells["Id"].Value;
+
+                    if (customerId < 1)
+                    {
+                        throw new Exception("Invalid customer ID.");
+                    }
+
+                    _customerService.DeleteCustomer(customerId);
+
+                    refreshDGV();
+
+                    MessageBox.Show("Customer deleted successfully.", "Message", MessageBoxButtons.OK);
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            refreshDGV();
         }
     }
 }

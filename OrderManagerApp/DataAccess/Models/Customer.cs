@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public class Customer(string firstName, string lastName, string email)
+    public class Customer
     {
         public int Id { get; set; }
-        public string FirstName { get; set; } = firstName;
-        public string LastName { get; set; } = lastName;
-        public string Email { get; set; } = email;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+
+        public Customer(string firstName, string lastName, string email)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+        }
+
+        public Customer(int id, string firstName, string lastName, string email)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace DataAccess.Repositories
                             string lastName = (string)row["LastName"];
                             string email = (string)row["Email"];
 
-                            Customer customer = new Customer(firstName, lastName, email);
+                            Customer customer = new Customer(id, firstName, lastName, email);
                             customers.Add(customer);
                         }
                     }
@@ -84,6 +84,85 @@ namespace DataAccess.Repositories
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while trying to add new customer. " + ex.Message);
+            }
+        }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Customers WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", customer.Id);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Customers");
+
+                        if (dataSet.Tables["Customers"]!.Rows.Count == 1)
+                        {
+                            DataRow row = dataSet.Tables["Customers"]!.Rows[0];
+                            row["FirstName"] = customer.FirstName;
+                            row["LastName"] = customer.LastName;
+                            row["Email"] = customer.Email;
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Customers");
+                        }
+                        else
+                        {
+                            throw new Exception("Customer with specified ID not found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to update customer. " + ex.Message);
+            }
+        }
+
+        public void DeleteCustomer(int customerId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Customers WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", customerId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Customers");
+
+                        if (dataSet.Tables["Customers"]!.Rows.Count == 1)
+                        {
+                            dataSet.Tables["Customers"]!.Rows[0].Delete();
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Customers");
+                        }
+                        else
+                        {
+                            throw new Exception("Customer with specified ID not found.");
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("An error occurred while trying to delete customer. " + ex.Message);
             }
         }
     }
