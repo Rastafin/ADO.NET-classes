@@ -30,5 +30,12 @@ namespace OrderManagerApp
             Hide();
             customersForm.ShowDialog();
         }
+
+        private void buttonPayments_Click(object sender, EventArgs e)
+        {
+            PaymentsForm paymentsForm = new PaymentsForm();
+            Hide();
+            paymentsForm.ShowDialog();
+        }
     }
 }
