@@ -12,5 +12,17 @@ namespace Logic.Services
     public class OrderService() : IOrderService
     {
         private readonly IOrderRepository _orderRepository = new OrderRepository();
+
+        public List<int> GetMissingOrderIdsInPayments()
+        {
+            try
+            {
+                return _orderRepository.GetMissingOrderIdsInPayments();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetMissingOrderIdsInPayments method. " + ex.Message);
+            }
+        }
     }
 }

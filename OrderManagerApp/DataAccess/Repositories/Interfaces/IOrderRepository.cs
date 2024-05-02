@@ -8,5 +8,6 @@ namespace DataAccess.Repositories.Interfaces
 {
     public interface IOrderRepository
     {
+        List<int> GetMissingOrderIdsInPayments();
     }
 }

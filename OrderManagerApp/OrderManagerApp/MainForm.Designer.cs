@@ -92,6 +92,7 @@
             buttonPayments.TabIndex = 4;
             buttonPayments.Text = "PAYMENTS";
             buttonPayments.UseVisualStyleBackColor = false;
+            buttonPayments.Click += buttonPayments_Click;
             // 
             // groupBox1
             // 

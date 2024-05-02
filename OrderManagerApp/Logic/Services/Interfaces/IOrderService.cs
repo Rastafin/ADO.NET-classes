@@ -8,5 +8,6 @@ namespace Logic.Services.Interfaces
 {
     public interface IOrderService
     {
+        List<int> GetMissingOrderIdsInPayments();
     }
 }

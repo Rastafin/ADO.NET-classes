@@ -60,7 +60,7 @@ namespace GUI
         {
             if (textBoxFirstName.Text == "" || textBoxLastName.Text == "" || textBoxEmail.Text == "")
             {
-                MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK);
+                MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace GUI
 
                 refreshDGV();
 
-                MessageBox.Show("Customer added successfully.", "Message", MessageBoxButtons.OK);
+                MessageBox.Show("Customer added successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -128,7 +128,7 @@ namespace GUI
 
                     if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
                     {
-                        MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK);
+                        MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -145,7 +145,7 @@ namespace GUI
 
                     refreshDGV();
 
-                    MessageBox.Show("Customer updated successfully.", "Message", MessageBoxButtons.OK);
+                    MessageBox.Show("Customer updated successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -178,7 +178,7 @@ namespace GUI
 
                     refreshDGV();
 
-                    MessageBox.Show("Customer deleted successfully.", "Message", MessageBoxButtons.OK);
+                    MessageBox.Show("Customer deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
