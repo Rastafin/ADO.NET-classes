@@ -35,11 +35,14 @@ namespace GUI
         {
             try
             {
-                dataGridViewPayments.DataSource = _paymentService.GetAllPayments();
+                dataGridViewPayments.DataSource = _paymentService.GetAllPaymentsViewModel();
 
                 dataGridViewPayments.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewPayments.Columns["Amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewPayments.Columns["PaymentDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                dataGridViewPayments.Columns["CustomerName"].HeaderText = "Name";
+                dataGridViewPayments.Columns["PaymentDate"].HeaderText = "Payment Date";
 
                 comboBoxOrdersId.Items.Clear();
 
@@ -77,9 +80,9 @@ namespace GUI
                     PaymentStatus.Waiting
                     ));
 
-                MessageBox.Show("Payment added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 refreshForm();
+
+                MessageBox.Show("Payment added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {
