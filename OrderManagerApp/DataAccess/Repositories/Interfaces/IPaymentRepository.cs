@@ -14,5 +14,8 @@ namespace DataAccess.Repositories.Interfaces
         void AddPayment(Payment payment);
         List<int> GetPaymentIdsWithStatusWiting();
         void SettlePayment(int paymentId, decimal amount);
+        decimal GetMaxSettlementAmount(int paymentId);
+        Payment GetPaymentById(int paymentId);
+        void UpdatePayment(Payment payment);
     }
 }

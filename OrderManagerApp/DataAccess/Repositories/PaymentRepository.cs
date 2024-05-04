@@ -74,7 +74,7 @@ namespace DataAccess.Repositories
                             int orderId = (int)row["OrderId"];
                             decimal amount = (decimal)row["Amount"];
                             DateTime paymentDate = (DateTime)row["PaymentDate"];
-                            PaymentStatus status = (PaymentStatus)Enum.Parse(typeof(PaymentStatus), row["Status"].ToString());
+                            PaymentStatus status = (PaymentStatus)Enum.Parse(typeof(PaymentStatus), row["Status"].ToString()!);
 
                             Payment payment = new Payment(id, orderId, amount, paymentDate, status);
                             payments.Add(payment);
@@ -189,6 +189,7 @@ namespace DataAccess.Repositories
                             }
 
                             row["Amount"] = updatedAmount;
+                            row["PaymentDate"] = DateTime.Now;
 
                             if (updatedAmount == 0)
                             {
@@ -208,6 +209,125 @@ namespace DataAccess.Repositories
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while settling payment. " + ex.Message);
+            }
+        }
+
+        public decimal GetMaxSettlementAmount(int paymentId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT Amount FROM Payments WHERE Id = @PaymentId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@PaymentId", paymentId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet);
+
+                        if (dataSet.Tables[0].Rows.Count == 1)
+                        {
+                            return (decimal)dataSet.Tables[0].Rows[0]["Amount"];
+                        }
+                        else
+                        {
+                            throw new Exception("Payment not found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get maximum settlement amount. " + ex.Message);
+            }
+        }
+
+        public Payment GetPaymentById(int paymentId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Payments WHERE Id = @PaymentId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@PaymentId", paymentId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Payment");
+
+                        if (dataSet.Tables["Payment"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["Payment"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            int orderId = (int)row["OrderId"];
+                            decimal amount = (decimal)row["Amount"];
+                            DateTime paymentDate = (DateTime)row["PaymentDate"];
+                            PaymentStatus status = (PaymentStatus)Enum.Parse(typeof(PaymentStatus), row["Status"].ToString()!);
+
+                            return new Payment(id, orderId, amount, paymentDate, status);
+                        }
+                        else
+                        {
+                            throw new Exception($"Payment with Id: {paymentId} cannot be found");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get payment by id. " + ex.Message);
+            }
+        }
+
+        public void UpdatePayment(Payment payment)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Payments WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", payment.Id);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Payments");
+
+                        if (dataSet.Tables["Payments"]!.Rows.Count == 1)
+                        {
+                            DataRow row = dataSet.Tables["Payments"]!.Rows[0];
+
+                            row["OrderId"] = payment.OrderId;
+                            row["Amount"] = payment.Amount;
+                            row["PaymentDate"] = payment.PaymentDate;
+                            row["Status"] = payment.Status;
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Payments");
+                        }
+                        else
+                        {
+                            throw new Exception("Payment with specified ID not found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to update payment. " + ex.Message);
             }
         }
     }

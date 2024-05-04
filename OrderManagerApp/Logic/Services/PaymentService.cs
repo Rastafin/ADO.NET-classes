@@ -28,6 +28,18 @@ namespace Logic.Services
             }
         }
 
+        public decimal CalculateTotalAmountForOrder(int orderId)
+        {
+            try
+            {
+                return _paymentRepository.CalculateTotalAmountForOrder(orderId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in CalculateTotalAmountForOrder method. " + ex.Message);
+            }
+        }
+
         public List<Payment> GetAllPayments()
         {
             try
@@ -72,6 +84,30 @@ namespace Logic.Services
             }
         }
 
+        public decimal GetMaxSettlementAmount(int paymentId)
+        {
+            try
+            {
+                return _paymentRepository.GetMaxSettlementAmount(paymentId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetMaxSettlementAmount method. " + ex.Message);
+            }
+        }
+
+        public Payment GetPaymentById(int paymentId)
+        {
+            try
+            {
+                return _paymentRepository.GetPaymentById(paymentId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetMaxSettlementAmount method. " + ex.Message);
+            }
+        }
+
         public List<int> GetPaymentIdsWithStatusWiting()
         {
             try
@@ -93,6 +129,18 @@ namespace Logic.Services
             catch (Exception ex)
             {
                 throw new Exception("An error occurred in SettlePayment method. " + ex.Message);
+            }
+        }
+
+        public void UpdatePayment(Payment payment)
+        {
+            try
+            {
+                _paymentRepository.UpdatePayment(payment);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in UpdatePayment method. " + ex.Message);
             }
         }
     }

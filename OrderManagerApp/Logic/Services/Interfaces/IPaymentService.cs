@@ -15,5 +15,9 @@ namespace Logic.Services.Interfaces
         List<PaymentViewModel> GetAllPaymentsViewModel();
         List<int> GetPaymentIdsWithStatusWiting();
         void SettlePayment(int paymentId, decimal amount);
+        decimal GetMaxSettlementAmount(int paymentId);
+        Payment GetPaymentById(int paymentId);
+        void UpdatePayment(Payment payment);
+        decimal CalculateTotalAmountForOrder(int orderId);
     }
 }

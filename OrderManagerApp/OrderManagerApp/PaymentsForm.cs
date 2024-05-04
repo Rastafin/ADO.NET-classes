@@ -42,19 +42,25 @@ namespace GUI
                 dataGridViewPayments.Columns["PaymentDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
                 dataGridViewPayments.Columns["CustomerName"].HeaderText = "Name";
-                dataGridViewPayments.Columns["PaymentDate"].HeaderText = "Payment Date";
+                dataGridViewPayments.Columns["PaymentDate"].HeaderText = "Update Date";
 
                 comboBoxOrdersId.Items.Clear();
                 comboBoxSettlePaymentsId.Items.Clear();
+                comboBoxWithdrawPaymentsId.Items.Clear();
 
                 foreach (int id in _orderService.GetMissingOrderIdsInPayments())
                 {
                     comboBoxOrdersId.Items.Add(id.ToString());
                 }
 
-                foreach(int id in _paymentService.GetPaymentIdsWithStatusWiting())
+                foreach (int id in _paymentService.GetPaymentIdsWithStatusWiting())
                 {
                     comboBoxSettlePaymentsId.Items.Add(id.ToString());
+                }
+
+                foreach(Payment payment in _paymentService.GetAllPayments())
+                {
+                    comboBoxWithdrawPaymentsId.Items.Add(payment.Id);
                 }
             }
             catch (Exception ex)
@@ -82,7 +88,7 @@ namespace GUI
 
                 _paymentService.AddPayment(new Payment(
                     int.Parse(comboBoxOrdersId.SelectedItem.ToString()!),
-                    DateTime.Today,
+                    DateTime.Now,
                     PaymentStatus.Waiting
                     ));
 
@@ -100,7 +106,13 @@ namespace GUI
         {
             try
             {
-                int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem!.ToString()!); ;
+                if (comboBoxSettlePaymentsId.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a payment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem!.ToString()!);
                 decimal settlementAmount = numericUpDownSettlePaymentAmount.Value;
 
                 _paymentService.SettlePayment(paymentId, settlementAmount);
@@ -118,6 +130,64 @@ namespace GUI
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void numericUpDownSettlePaymentAmount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxSettlePaymentsId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxSettlePaymentsId.SelectedItem != null)
+                {
+                    int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem.ToString()!);
+
+                    numericUpDownSettlePaymentAmount.Maximum = _paymentService.GetMaxSettlementAmount(paymentId);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dataGridViewPayments_SelectionChanged(object sender, EventArgs e)
+        {
+            dataGridViewPayments.ClearSelection();
+        }
+
+        private void buttonWithdrawPayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(comboBoxWithdrawPaymentsId.SelectedItem != null)
+                {
+                    int paymentId = (int)comboBoxWithdrawPaymentsId.SelectedItem;
+
+                    Payment payment = _paymentService.GetPaymentById(paymentId);
+
+                    payment.Amount = _paymentService.CalculateTotalAmountForOrder(paymentId);
+                    payment.Status = PaymentStatus.Waiting;
+                    payment.PaymentDate = DateTime.Now;
+
+                    _paymentService.UpdatePayment(payment);
+
+                    refreshForm();
+                    
+                    MessageBox.Show("Payment withdrawn successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Please select a payment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

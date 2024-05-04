@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridViewPayments = new DataGridView();
             groupBox4 = new GroupBox();
             groupBox3 = new GroupBox();
             label4 = new Label();
             comboBoxWithdrawPaymentsId = new ComboBox();
-            button1 = new Button();
+            buttonWithdrawPayment = new Button();
             groupBox1 = new GroupBox();
             numericUpDownSettlePaymentAmount = new NumericUpDown();
             label3 = new Label();
@@ -62,23 +62,23 @@
             dataGridViewPayments.AllowUserToResizeColumns = false;
             dataGridViewPayments.AllowUserToResizeRows = false;
             dataGridViewPayments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewPayments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridViewPayments.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewPayments.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewPayments.Location = new Point(12, 12);
             dataGridViewPayments.MultiSelect = false;
             dataGridViewPayments.Name = "dataGridViewPayments";
@@ -87,6 +87,7 @@
             dataGridViewPayments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPayments.Size = new Size(444, 174);
             dataGridViewPayments.TabIndex = 1;
+            dataGridViewPayments.SelectionChanged += dataGridViewPayments_SelectionChanged;
             // 
             // groupBox4
             // 
@@ -104,7 +105,7 @@
             // 
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(comboBoxWithdrawPaymentsId);
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(buttonWithdrawPayment);
             groupBox3.Location = new Point(6, 285);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(432, 73);
@@ -130,16 +131,17 @@
             comboBoxWithdrawPaymentsId.Size = new Size(121, 23);
             comboBoxWithdrawPaymentsId.TabIndex = 3;
             // 
-            // button1
+            // buttonWithdrawPayment
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button1.Location = new Point(311, 22);
-            button1.Name = "button1";
-            button1.Size = new Size(115, 31);
-            button1.TabIndex = 2;
-            button1.Text = "GENERATE";
-            button1.UseVisualStyleBackColor = false;
+            buttonWithdrawPayment.BackColor = SystemColors.ActiveCaption;
+            buttonWithdrawPayment.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            buttonWithdrawPayment.Location = new Point(311, 22);
+            buttonWithdrawPayment.Name = "buttonWithdrawPayment";
+            buttonWithdrawPayment.Size = new Size(115, 31);
+            buttonWithdrawPayment.TabIndex = 2;
+            buttonWithdrawPayment.Text = "WITHDRAW";
+            buttonWithdrawPayment.UseVisualStyleBackColor = false;
+            buttonWithdrawPayment.Click += buttonWithdrawPayment_Click;
             // 
             // groupBox1
             // 
@@ -165,6 +167,7 @@
             numericUpDownSettlePaymentAmount.Size = new Size(120, 23);
             numericUpDownSettlePaymentAmount.TabIndex = 6;
             numericUpDownSettlePaymentAmount.TextAlign = HorizontalAlignment.Center;
+            numericUpDownSettlePaymentAmount.ValueChanged += numericUpDownSettlePaymentAmount_ValueChanged;
             // 
             // label3
             // 
@@ -192,6 +195,7 @@
             comboBoxSettlePaymentsId.Name = "comboBoxSettlePaymentsId";
             comboBoxSettlePaymentsId.Size = new Size(121, 23);
             comboBoxSettlePaymentsId.TabIndex = 3;
+            comboBoxSettlePaymentsId.SelectedIndexChanged += comboBoxSettlePaymentsId_SelectedIndexChanged;
             // 
             // buttonSettlePayment
             // 
@@ -302,6 +306,6 @@
         private GroupBox groupBox3;
         private Label label4;
         private ComboBox comboBoxWithdrawPaymentsId;
-        private Button button1;
+        private Button buttonWithdrawPayment;
     }
 }
