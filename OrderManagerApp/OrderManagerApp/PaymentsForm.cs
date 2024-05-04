@@ -45,10 +45,16 @@ namespace GUI
                 dataGridViewPayments.Columns["PaymentDate"].HeaderText = "Payment Date";
 
                 comboBoxOrdersId.Items.Clear();
+                comboBoxSettlePaymentsId.Items.Clear();
 
                 foreach (int id in _orderService.GetMissingOrderIdsInPayments())
                 {
                     comboBoxOrdersId.Items.Add(id.ToString());
+                }
+
+                foreach(int id in _paymentService.GetPaymentIdsWithStatusWiting())
+                {
+                    comboBoxSettlePaymentsId.Items.Add(id.ToString());
                 }
             }
             catch (Exception ex)
@@ -84,10 +90,34 @@ namespace GUI
 
                 MessageBox.Show("Payment added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonSettlePayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem!.ToString()!); ;
+                decimal settlementAmount = numericUpDownSettlePaymentAmount.Value;
+
+                _paymentService.SettlePayment(paymentId, settlementAmount);
+
+                refreshForm();
+
+                MessageBox.Show("Payment settled successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

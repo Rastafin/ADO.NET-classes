@@ -124,5 +124,91 @@ namespace DataAccess.Repositories
                 throw new Exception("An error occurred while trying to add new payment. " + ex.Message);
             }
         }
+
+        public List<int> GetPaymentIdsWithStatusWiting()
+        {
+            List<int> paymentIds = new List<int>();
+
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+
+                    string sql = "SELECT Id FROM Payments WHERE Status = @Status";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@Status", PaymentStatus.Waiting);
+
+                        SqlDataAdapter ordersAdapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        ordersAdapter.Fill(dataSet);
+
+                        foreach(DataRow row in dataSet.Tables[0].Rows)
+                        {
+                            paymentIds.Add((int)row["Id"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get payment IDs with status Waiting. " + ex.Message);
+            }
+
+            return paymentIds;
+        }
+
+        public void SettlePayment(int paymentId, decimal amount)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Payments WHERE Id = @PaymentId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@PaymentId", paymentId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Payments");
+
+                        if (dataSet.Tables["Payments"]!.Rows.Count == 1)
+                        {
+                            DataRow row = dataSet.Tables[0].Rows[0];
+                            decimal currentAmount = (decimal)row["Amount"];
+                            decimal updatedAmount = currentAmount - amount;
+
+                            if (updatedAmount < 0)
+                            {
+                                throw new Exception("Payment amount sent is too high. ");
+                            }
+
+                            row["Amount"] = updatedAmount;
+
+                            if (updatedAmount == 0)
+                            {
+                                row["Status"] = PaymentStatus.Paid;
+                            }
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Payments");
+                        }
+                        else
+                        {
+                            throw new Exception("Payment with specified ID not found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while settling payment. " + ex.Message);
+            }
+        }
     }
 }

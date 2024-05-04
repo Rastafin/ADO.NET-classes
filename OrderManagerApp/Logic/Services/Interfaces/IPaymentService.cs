@@ -13,5 +13,7 @@ namespace Logic.Services.Interfaces
         List<Payment> GetAllPayments();
         void AddPayment(Payment payment);
         List<PaymentViewModel> GetAllPaymentsViewModel();
+        List<int> GetPaymentIdsWithStatusWiting();
+        void SettlePayment(int paymentId, decimal amount);
     }
 }
