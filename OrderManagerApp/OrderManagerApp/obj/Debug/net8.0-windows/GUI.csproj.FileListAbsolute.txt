@@ -31,3 +31,5 @@ C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\bin\Debug\net8.0-win
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\OrderManagerApp.MainForm.resources
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.CustomersForm.resources
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.PaymentsForm.resources
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\bin\Debug\net8.0-windows\Shared.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\bin\Debug\net8.0-windows\Shared.pdb

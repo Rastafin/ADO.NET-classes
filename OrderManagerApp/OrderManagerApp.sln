@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "OrderManagerApp\GUI.csproj", "{5FC2B195-607A-4A86-80D0-8054698C2761}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "OrderManagerApp\GUI.csproj", "{5FC2B195-607A-4A86-80D0-8054698C2761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{3E81884D-B606-47AF-A9E1-885A3A8820C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{3E81884D-B606-47AF-A9E1-885A3A8820C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{990A3CF4-EEDD-4D49-A741-689B7703D136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{990A3CF4-EEDD-4D49-A741-689B7703D136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3EB281B3-3650-4EB1-9D13-20F3034CF300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{990A3CF4-EEDD-4D49-A741-689B7703D136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB281B3-3650-4EB1-9D13-20F3034CF300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB281B3-3650-4EB1-9D13-20F3034CF300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB281B3-3650-4EB1-9D13-20F3034CF300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB281B3-3650-4EB1-9D13-20F3034CF300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

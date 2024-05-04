@@ -47,7 +47,7 @@ namespace DataAccess.Repositories
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while trying to get  all customers. " + ex.Message);
+                throw new Exception("An error occurred while trying to get all customers. " + ex.Message);
             }
 
             return customers;
@@ -164,6 +164,48 @@ namespace DataAccess.Repositories
             {
                 throw new Exception("An error occurred while trying to delete customer. " + ex.Message);
             }
+        }
+
+        public Customer GetCustomerByOrderId(int orderId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT Customers.* FROM Customers JOIN Orders ON Customers.Id = Orders.CustomerId WHERE Orders.Id = @OrderId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderId", orderId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Customers");
+
+                        if (dataSet.Tables["Customers"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["Customers"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            string firstName = (string)row["FirstName"];
+                            string lastName = (string)row["LastName"];
+                            string email = (string)row["Email"];
+
+                            return new Customer(id, firstName, lastName, email);
+                        }
+                        else
+                        {
+                            throw new Exception($"Customer connected with order: {orderId} cannot be found");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get customer. " + ex.Message);
+            }
+
         }
     }
 }

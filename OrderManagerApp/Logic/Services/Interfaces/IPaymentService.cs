@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using Shared.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Logic.Services.Interfaces
     {
         List<Payment> GetAllPayments();
         void AddPayment(Payment payment);
+        List<PaymentViewModel> GetAllPaymentsViewModel();
     }
 }

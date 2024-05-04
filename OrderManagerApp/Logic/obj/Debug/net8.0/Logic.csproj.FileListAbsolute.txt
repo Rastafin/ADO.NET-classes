@@ -15,3 +15,5 @@ C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\refint\Logic.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.pdb
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\ref\Logic.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\Shared.dll
+C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Logic\bin\Debug\net8.0\Shared.pdb

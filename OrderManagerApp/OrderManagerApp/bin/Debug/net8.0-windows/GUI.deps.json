@@ -108,10 +108,19 @@
       },
       "Logic/1.0.0": {
         "dependencies": {
-          "DataAccess": "1.0.0"
+          "DataAccess": "1.0.0",
+          "Shared": "1.0.0"
         },
         "runtime": {
           "Logic.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "dependencies": {
+          "DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "Shared.dll": {}
         }
       }
     }
@@ -212,6 +221,11 @@
       "sha512": ""
     },
     "Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
