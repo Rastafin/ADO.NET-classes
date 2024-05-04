@@ -71,5 +71,29 @@ namespace Logic.Services
                 throw new Exception("An error occurred in GetAllPaymentsViewModel method. " + ex.Message);
             }
         }
+
+        public List<int> GetPaymentIdsWithStatusWiting()
+        {
+            try
+            {
+                return _paymentRepository.GetPaymentIdsWithStatusWiting();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetPaymentIdsWithStatusWiting method. " + ex.Message);
+            }
+        }
+
+        public void SettlePayment(int paymentId, decimal amount)
+        {
+            try
+            {
+                _paymentRepository.SettlePayment(paymentId, amount);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in SettlePayment method. " + ex.Message);
+            }
+        }
     }
 }
