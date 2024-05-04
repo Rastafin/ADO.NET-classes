@@ -27,32 +27,52 @@
       "RelativeMoniker": "D:0:0:{3E81884D-B606-47AF-A9E1-885A3A8820C7}|Logic\\Logic.csproj|solutionrelative:logic\\services\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EB281B3-3650-4EB1-9D13-20F3034CF300}|Shared\\Shared.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\shared\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,24 +87,12 @@
       "RelativeMoniker": "D:0:0:{3E81884D-B606-47AF-A9E1-885A3A8820C7}|Logic\\Logic.csproj|solutionrelative:logic\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5FC2B195-607A-4A86-80D0-8054698C2761}|OrderManagerApp\\GUI.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\ordermanagerapp\\customersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5FC2B195-607A-4A86-80D0-8054698C2761}|OrderManagerApp\\GUI.csproj|solutionrelative:ordermanagerapp\\customersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FC2B195-607A-4A86-80D0-8054698C2761}|OrderManagerApp\\GUI.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\ordermanagerapp\\customersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC2B195-607A-4A86-80D0-8054698C2761}|OrderManagerApp\\GUI.csproj|solutionrelative:ordermanagerapp\\customersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E81884D-B606-47AF-A9E1-885A3A8820C7}|Logic\\Logic.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\logic\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,14 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3E81884D-B606-47AF-A9E1-885A3A8820C7}|Logic\\Logic.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\logic\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E81884D-B606-47AF-A9E1-885A3A8820C7}|Logic\\Logic.csproj|solutionrelative:logic\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\repositories\\interfaces\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\interfaces\\iorderdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\dataaccess\\models\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{990A3CF4-EEDD-4D49-A741-689B7703D136}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -164,7 +164,7 @@
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\PaymentRepository.cs",
               "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\PaymentRepository.cs",
               "RelativeToolTip": "DataAccess\\Repositories\\PaymentRepository.cs",
-              "ViewState": "AQIAAJ4AAAAAAAAAAAAqwLEAAAA3AAAA",
+              "ViewState": "AQIAACUBAAAAAAAAAAAAwDsBAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T10:40:49.102Z",
               "EditorCaption": ""
@@ -177,35 +177,9 @@
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\CustomerRepository.cs",
               "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\CustomerRepository.cs",
               "RelativeToolTip": "DataAccess\\Repositories\\CustomerRepository.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAQwHUAAAAcAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAQwGkAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T12:02:15.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "Logic\\Services\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "Logic\\Services\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T11:37:31.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\PaymentService.cs",
-              "RelativeDocumentMoniker": "Logic\\Services\\PaymentService.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\PaymentService.cs",
-              "RelativeToolTip": "Logic\\Services\\PaymentService.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwF4AAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T11:18:20.645Z",
               "EditorCaption": ""
             },
             {
@@ -228,66 +202,40 @@
               "RelativeDocumentMoniker": "OrderManagerApp\\PaymentsForm.cs",
               "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\PaymentsForm.cs",
               "RelativeToolTip": "OrderManagerApp\\PaymentsForm.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAqwGYAAAAQAAAA",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAiwLMAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T10:07:10.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Logic\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Logic\\Services\\PaymentService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T11:18:20.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Logic\\Services\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "Logic\\Services\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAYwBQAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T11:37:31.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IPaymentRepository.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:42:11.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PaymentStatus.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\PaymentStatus.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Enums\\PaymentStatus.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\PaymentStatus.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Enums\\PaymentStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:36:17.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Product.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Product.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:15:30.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Payment.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Payment.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Payment.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:27:11.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\OrderRepository.cs",
@@ -300,20 +248,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "DocumentIndex": 7,
+              "Title": "IOrderDetailsRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:41:33.619Z",
+              "WhenOpened": "2024-04-29T10:41:55.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IProductRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IProductRepository.cs",
@@ -326,46 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PaymentViewModel.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\ViewModels\\PaymentViewModel.cs",
-              "RelativeDocumentMoniker": "Shared\\ViewModels\\PaymentViewModel.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\ViewModels\\PaymentViewModel.cs",
-              "RelativeToolTip": "Shared\\ViewModels\\PaymentViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T10:55:00.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrderDetails.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\OrderDetails.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\OrderDetails.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\OrderDetails.cs",
-              "RelativeToolTip": "DataAccess\\Models\\OrderDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAkwAsAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:24:23.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "Logic\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\CustomerService.cs",
-              "RelativeToolTip": "Logic\\Services\\CustomerService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T11:39:22.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 9,
               "Title": "ICustomerRepository.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\ICustomerRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\ICustomerRepository.cs",
@@ -373,11 +282,51 @@
               "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\ICustomerRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:41:21.505Z"
+              "WhenOpened": "2024-04-29T10:41:21.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 10,
+              "Title": "IPaymentRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IPaymentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:42:11.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:44:20.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Payment.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Payment.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Payment.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:27:11.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Order.cs",
               "RelativeDocumentMoniker": "DataAccess\\Models\\Order.cs",
@@ -385,11 +334,98 @@
               "RelativeToolTip": "DataAccess\\Models\\Order.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:20:08.518Z"
+              "WhenOpened": "2024-04-29T10:20:08.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Enums\\OrderStatus.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\OrderStatus.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Enums\\OrderStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:20:50.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Product.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Product.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:15:30.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Enums\\PaymentStatus.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\PaymentStatus.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Enums\\PaymentStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:36:17.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:41:33.619Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "PaymentViewModel.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\ViewModels\\PaymentViewModel.cs",
+              "RelativeDocumentMoniker": "Shared\\ViewModels\\PaymentViewModel.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\ViewModels\\PaymentViewModel.cs",
+              "RelativeToolTip": "Shared\\ViewModels\\PaymentViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T10:55:00.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderDetails.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\OrderDetails.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\OrderDetails.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\OrderDetails.cs",
+              "RelativeToolTip": "DataAccess\\Models\\OrderDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwAsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:24:23.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Logic\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\CustomerService.cs",
+              "RelativeToolTip": "Logic\\Services\\CustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T11:39:22.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "CustomersForm.cs [Projekt]",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\CustomersForm.cs",
               "RelativeDocumentMoniker": "OrderManagerApp\\CustomersForm.cs",
@@ -400,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "CustomersForm.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\CustomersForm.cs",
               "RelativeDocumentMoniker": "OrderManagerApp\\CustomersForm.cs",
@@ -412,19 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\ProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:44:20.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\OrderService.cs",
@@ -436,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\Interfaces\\IOrderService.cs",
@@ -448,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "MainForm.cs [Projekt]",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\MainForm.cs",
               "RelativeDocumentMoniker": "OrderManagerApp\\MainForm.cs",
@@ -459,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\MainForm.cs",
               "RelativeDocumentMoniker": "OrderManagerApp\\MainForm.cs",
@@ -471,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "OrderDetailsService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\OrderDetailsService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\OrderDetailsService.cs",
@@ -483,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\ProductService.cs",
@@ -495,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "IOrderDetailsService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IOrderDetailsService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\Interfaces\\IOrderDetailsService.cs",
@@ -507,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Services\\Interfaces\\IProductService.cs",
               "RelativeDocumentMoniker": "Logic\\Services\\Interfaces\\IProductService.cs",
@@ -516,30 +540,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T11:38:31.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IOrderDetailsRepository.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\Interfaces\\IOrderDetailsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:41:55.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Enums\\OrderStatus.cs",
-              "ToolTip": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\Models\\Enums\\OrderStatus.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Enums\\OrderStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:20:50.284Z"
             }
           ]
         }
