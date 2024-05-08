@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OrderManagerApp",
+    "\\OrderManagerApp\\Logic",
+    "\\OrderManagerApp\\Logic\\Services",
+    "\\OrderManagerApp\\Logic\\Services\\Interfaces"
+  ],
+  "SelectedNode": "\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
+  "PreviewInSolutionExplorer": false
+}
