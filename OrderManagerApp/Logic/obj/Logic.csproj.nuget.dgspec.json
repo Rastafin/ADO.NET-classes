@@ -11,7 +11,7 @@
         "projectName": "DataAccess",
         "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -106,6 +111,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -127,7 +137,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -138,7 +148,7 @@
         "projectName": "Shared",
         "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -165,6 +175,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -186,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

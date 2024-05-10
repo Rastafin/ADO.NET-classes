@@ -4,8 +4,9 @@
     "\\OrderManagerApp",
     "\\OrderManagerApp\\Logic",
     "\\OrderManagerApp\\Logic\\Services",
-    "\\OrderManagerApp\\Logic\\Services\\Interfaces"
+    "\\OrderManagerApp\\Logic\\Services\\Interfaces",
+    "\\OrderManagerApp\\OrderManagerApp"
   ],
-  "SelectedNode": "\\OrderManagerApp\\Logic\\Services\\Interfaces\\IPaymentService.cs",
+  "SelectedNode": "\\OrderManagerApp\\OrderManagerApp\\PaymentsForm.cs",
   "PreviewInSolutionExplorer": false
 }
