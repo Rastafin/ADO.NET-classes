@@ -8,6 +8,6 @@
     "\\OrderManagerApp\\DataAccess\\Repositories",
     "\\OrderManagerApp\\OrderManagerApp"
   ],
-  "SelectedNode": "\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
+  "SelectedNode": "\\OrderManagerApp\\OrderManagerApp\\ProductsForm.cs",
   "PreviewInSolutionExplorer": false
 }

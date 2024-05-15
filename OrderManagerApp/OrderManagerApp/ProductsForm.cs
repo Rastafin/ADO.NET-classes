@@ -34,7 +34,7 @@ namespace GUI
             try
             {
                 dataGridViewProducts.DataSource = _productService.GetAllProducts();
-
+                dataGridViewProducts.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewProducts.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewProducts.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewProducts.Columns["StockQuantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -67,11 +67,12 @@ namespace GUI
 
              try
              {
-            _productService.AddProduct(new Product(
-                textBoxName.Text,
-                numericUpDown1Price.Value,
-                Convert.ToInt16(numericUpDown2StockQuantity.Value)));
-
+                
+                _productService.AddProduct(new Product(
+                    textBoxName.Text,
+                    numericUpDown1Price.Value,
+                    int.Parse(numericUpDown2StockQuantity.Value.ToString())));
+                
             refreshDGV();
 
             MessageBox.Show("Product added successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

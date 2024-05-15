@@ -47,7 +47,6 @@
             comboBoxOrdersId = new ComboBox();
             buttonChooseCustomer = new Button();
             dataGridViewOrders = new DataGridView();
-            buttonViewOrderDetails = new Button();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -256,23 +255,11 @@
             dataGridViewOrders.Size = new Size(444, 174);
             dataGridViewOrders.TabIndex = 8;
             // 
-            // buttonViewOrderDetails
-            // 
-            buttonViewOrderDetails.BackColor = SystemColors.ActiveCaption;
-            buttonViewOrderDetails.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            buttonViewOrderDetails.Location = new Point(329, 611);
-            buttonViewOrderDetails.Name = "buttonViewOrderDetails";
-            buttonViewOrderDetails.Size = new Size(115, 31);
-            buttonViewOrderDetails.TabIndex = 11;
-            buttonViewOrderDetails.Text = "ORDER DETAILS";
-            buttonViewOrderDetails.UseVisualStyleBackColor = false;
-            // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(468, 654);
-            Controls.Add(buttonViewOrderDetails);
             Controls.Add(buttonBack);
             Controls.Add(groupBox4);
             Controls.Add(dataGridViewOrders);
@@ -312,6 +299,5 @@
         private ComboBox comboBoxOrdersId;
         private Button buttonChooseCustomer;
         private DataGridView dataGridViewOrders;
-        private Button buttonViewOrderDetails;
     }
 }
