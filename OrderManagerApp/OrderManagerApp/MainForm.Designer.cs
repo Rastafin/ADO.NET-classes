@@ -82,6 +82,7 @@
             buttonOrders.TabIndex = 3;
             buttonOrders.Text = "ORDERS";
             buttonOrders.UseVisualStyleBackColor = false;
+            buttonOrders.Click += buttonOrders_Click;
             // 
             // buttonPayments
             // 

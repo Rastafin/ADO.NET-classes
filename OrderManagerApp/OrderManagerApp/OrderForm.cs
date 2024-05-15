@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderManagerApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace GUI
         public OrderForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            this.Hide();
+            mainForm.ShowDialog();
         }
     }
 }

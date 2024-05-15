@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public class OrderDetails(int orderId, int productId, int quantity)
+    public class OrderDetails
     {
         public int Id { get; set; }
-        public int OrderId { get; set; } = orderId;
-        public int ProductId { get; set; } = productId;
-        public int Quantity { get; set; } = quantity;
+        public int OrderId { get; set; } 
+        public int ProductId { get; set; } 
+        public int Quantity { get; set; }
+
+        public OrderDetails(int id, int orderId, int productId, int quantity)
+        {
+            Id = id;
+            OrderId = orderId;
+            ProductId = productId;
+            Quantity = quantity;
+        }
+        public OrderDetails( int orderId, int productId, int quantity)
+        {
+            
+            OrderId = orderId;
+            ProductId = productId;
+            Quantity = quantity;
+        }
     }
 }

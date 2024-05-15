@@ -44,5 +44,12 @@ namespace OrderManagerApp
             Hide();
             productsForm.ShowDialog();
         }
+
+        private void buttonOrders_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            Hide();
+            orderForm.ShowDialog();
+        }
     }
 }
