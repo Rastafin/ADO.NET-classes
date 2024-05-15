@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\OrderManagerApp",
-    "\\OrderManagerApp\\Logic",
-    "\\OrderManagerApp\\Logic\\Services",
-    "\\OrderManagerApp\\Logic\\Services\\Interfaces",
+    "\\OrderManagerApp\\DataAccess",
+    "\\OrderManagerApp\\DataAccess\\Data",
+    "\\OrderManagerApp\\DataAccess\\Models",
+    "\\OrderManagerApp\\DataAccess\\Repositories",
     "\\OrderManagerApp\\OrderManagerApp"
   ],
-  "SelectedNode": "\\OrderManagerApp\\OrderManagerApp\\PaymentsForm.cs",
+  "SelectedNode": "\\OrderManagerApp\\DataAccess\\Repositories\\ProductRepository.cs",
   "PreviewInSolutionExplorer": false
 }

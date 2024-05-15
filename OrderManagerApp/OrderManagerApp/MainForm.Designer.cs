@@ -70,6 +70,7 @@
             buttonProducts.TabIndex = 2;
             buttonProducts.Text = "PRODUCTS";
             buttonProducts.UseVisualStyleBackColor = false;
+            buttonProducts.Click += buttonProducts_Click;
             // 
             // buttonOrders
             // 

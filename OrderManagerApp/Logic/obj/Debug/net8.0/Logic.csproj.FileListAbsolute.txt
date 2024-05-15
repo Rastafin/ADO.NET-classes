@@ -31,8 +31,8 @@ C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\ne
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.AssemblyInfo.cs
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.CoreCompileInputs.cache
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.sourcelink.json
-C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.CopyComplete
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.dll
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\refint\Logic.dll
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.pdb
 C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\ref\Logic.dll
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\Logic\obj\Debug\net8.0\Logic.csproj.Up2Date

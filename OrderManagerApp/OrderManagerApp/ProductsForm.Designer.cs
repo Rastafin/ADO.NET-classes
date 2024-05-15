@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             buttonBack = new Button();
             groupBox1 = new GroupBox();
             groupBox4 = new GroupBox();
             buttonDeleteProduct = new Button();
             groupBox3 = new GroupBox();
-            textBoxEditFirstName = new TextBox();
+            numericUpDown4StockQunatityEdit = new NumericUpDown();
+            numericUpDown3PriceEdit = new NumericUpDown();
+            textBoxEditName = new TextBox();
             buttonEditProduct = new Button();
             groupBox2 = new GroupBox();
+            numericUpDown2StockQuantity = new NumericUpDown();
+            numericUpDown1Price = new NumericUpDown();
             textBoxName = new TextBox();
             buttonAddProduct = new Button();
             dataGridViewProducts = new DataGridView();
-            numericUpDown1Price = new NumericUpDown();
-            numericUpDown2StockQuantity = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
             groupBox1.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4StockQunatityEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3PriceEdit).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1Price).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2StockQuantity).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1Price).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
             SuspendLayout();
             // 
             // buttonBack
@@ -66,6 +66,7 @@
             buttonBack.TabIndex = 9;
             buttonBack.Text = "BACK";
             buttonBack.UseVisualStyleBackColor = false;
+            buttonBack.Click += buttonBack_Click;
             // 
             // groupBox1
             // 
@@ -77,6 +78,7 @@
             groupBox1.Size = new Size(444, 389);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // groupBox4
             // 
@@ -87,6 +89,7 @@
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "DELETE PRODUCT";
+            groupBox4.Enter += groupBox4_Enter;
             // 
             // buttonDeleteProduct
             // 
@@ -98,12 +101,13 @@
             buttonDeleteProduct.TabIndex = 2;
             buttonDeleteProduct.Text = "DELETE";
             buttonDeleteProduct.UseVisualStyleBackColor = false;
+            buttonDeleteProduct.Click += buttonDeleteProduct_Click;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(numericUpDown1);
-            groupBox3.Controls.Add(numericUpDown2);
-            groupBox3.Controls.Add(textBoxEditFirstName);
+            groupBox3.Controls.Add(numericUpDown4StockQunatityEdit);
+            groupBox3.Controls.Add(numericUpDown3PriceEdit);
+            groupBox3.Controls.Add(textBoxEditName);
             groupBox3.Controls.Add(buttonEditProduct);
             groupBox3.Location = new Point(6, 146);
             groupBox3.Name = "groupBox3";
@@ -112,13 +116,31 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "EDIT PRODUCT";
             // 
-            // textBoxEditFirstName
+            // numericUpDown4StockQunatityEdit
             // 
-            textBoxEditFirstName.Location = new Point(32, 22);
-            textBoxEditFirstName.Name = "textBoxEditFirstName";
-            textBoxEditFirstName.PlaceholderText = "Firstname";
-            textBoxEditFirstName.Size = new Size(223, 23);
-            textBoxEditFirstName.TabIndex = 6;
+            numericUpDown4StockQunatityEdit.Location = new Point(32, 80);
+            numericUpDown4StockQunatityEdit.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDown4StockQunatityEdit.Name = "numericUpDown4StockQunatityEdit";
+            numericUpDown4StockQunatityEdit.Size = new Size(223, 23);
+            numericUpDown4StockQunatityEdit.TabIndex = 8;
+            // 
+            // numericUpDown3PriceEdit
+            // 
+            numericUpDown3PriceEdit.DecimalPlaces = 2;
+            numericUpDown3PriceEdit.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericUpDown3PriceEdit.Location = new Point(32, 51);
+            numericUpDown3PriceEdit.Maximum = new decimal(new int[] { 3000, 0, 0, 0 });
+            numericUpDown3PriceEdit.Name = "numericUpDown3PriceEdit";
+            numericUpDown3PriceEdit.Size = new Size(223, 23);
+            numericUpDown3PriceEdit.TabIndex = 7;
+            // 
+            // textBoxEditName
+            // 
+            textBoxEditName.Location = new Point(32, 22);
+            textBoxEditName.Name = "textBoxEditName";
+            textBoxEditName.PlaceholderText = "Name";
+            textBoxEditName.Size = new Size(223, 23);
+            textBoxEditName.TabIndex = 6;
             // 
             // buttonEditProduct
             // 
@@ -130,6 +152,7 @@
             buttonEditProduct.TabIndex = 2;
             buttonEditProduct.Text = "EDIT";
             buttonEditProduct.UseVisualStyleBackColor = false;
+            buttonEditProduct.Click += buttonEditProduct_Click;
             // 
             // groupBox2
             // 
@@ -144,11 +167,29 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "ADD PRODUCT";
             // 
+            // numericUpDown2StockQuantity
+            // 
+            numericUpDown2StockQuantity.Location = new Point(32, 80);
+            numericUpDown2StockQuantity.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDown2StockQuantity.Name = "numericUpDown2StockQuantity";
+            numericUpDown2StockQuantity.Size = new Size(223, 23);
+            numericUpDown2StockQuantity.TabIndex = 5;
+            // 
+            // numericUpDown1Price
+            // 
+            numericUpDown1Price.DecimalPlaces = 2;
+            numericUpDown1Price.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericUpDown1Price.Location = new Point(32, 51);
+            numericUpDown1Price.Maximum = new decimal(new int[] { 3000, 0, 0, 0 });
+            numericUpDown1Price.Name = "numericUpDown1Price";
+            numericUpDown1Price.Size = new Size(223, 23);
+            numericUpDown1Price.TabIndex = 4;
+            // 
             // textBoxName
             // 
             textBoxName.Location = new Point(32, 22);
             textBoxName.Name = "textBoxName";
-            textBoxName.PlaceholderText = "Firstname";
+            textBoxName.PlaceholderText = "Name";
             textBoxName.Size = new Size(223, 23);
             textBoxName.TabIndex = 3;
             // 
@@ -162,6 +203,7 @@
             buttonAddProduct.TabIndex = 2;
             buttonAddProduct.Text = "ADD";
             buttonAddProduct.UseVisualStyleBackColor = false;
+            buttonAddProduct.Click += buttonAddProduct_Click;
             // 
             // dataGridViewProducts
             // 
@@ -170,23 +212,23 @@
             dataGridViewProducts.AllowUserToResizeColumns = false;
             dataGridViewProducts.AllowUserToResizeRows = false;
             dataGridViewProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewProducts.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewProducts.Location = new Point(12, 12);
             dataGridViewProducts.MultiSelect = false;
             dataGridViewProducts.Name = "dataGridViewProducts";
@@ -195,38 +237,8 @@
             dataGridViewProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewProducts.Size = new Size(444, 174);
             dataGridViewProducts.TabIndex = 7;
-            // 
-            // numericUpDown1Price
-            // 
-            numericUpDown1Price.DecimalPlaces = 2;
-            numericUpDown1Price.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
-            numericUpDown1Price.Location = new Point(32, 51);
-            numericUpDown1Price.Name = "numericUpDown1Price";
-            numericUpDown1Price.Size = new Size(223, 23);
-            numericUpDown1Price.TabIndex = 4;
-            // 
-            // numericUpDown2StockQuantity
-            // 
-            numericUpDown2StockQuantity.Location = new Point(32, 80);
-            numericUpDown2StockQuantity.Name = "numericUpDown2StockQuantity";
-            numericUpDown2StockQuantity.Size = new Size(223, 23);
-            numericUpDown2StockQuantity.TabIndex = 5;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(32, 80);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(223, 23);
-            numericUpDown1.TabIndex = 8;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.DecimalPlaces = 2;
-            numericUpDown2.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
-            numericUpDown2.Location = new Point(32, 51);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(223, 23);
-            numericUpDown2.TabIndex = 7;
+            dataGridViewProducts.CellContentClick += dataGridViewProducts_CellContentClick;
+            dataGridViewProducts.SelectionChanged += dataGridViewProducts_SelectionChanged;
             // 
             // ProductsForm
             // 
@@ -240,17 +252,18 @@
             Name = "ProductsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ProductsForm";
+            Load += ProductsForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4StockQunatityEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3PriceEdit).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1Price).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2StockQuantity).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1Price).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
             ResumeLayout(false);
         }
 
@@ -261,14 +274,14 @@
         private GroupBox groupBox4;
         private Button buttonDeleteProduct;
         private GroupBox groupBox3;
-        private TextBox textBoxEditFirstName;
+        private TextBox textBoxEditName;
         private Button buttonEditProduct;
         private GroupBox groupBox2;
         private TextBox textBoxName;
         private Button buttonAddProduct;
         private DataGridView dataGridViewProducts;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown4StockQunatityEdit;
+        private NumericUpDown numericUpDown3PriceEdit;
         private NumericUpDown numericUpDown2StockQuantity;
         private NumericUpDown numericUpDown1Price;
     }

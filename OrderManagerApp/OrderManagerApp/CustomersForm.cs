@@ -181,10 +181,15 @@ namespace GUI
                     MessageBox.Show("Customer deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

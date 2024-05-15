@@ -107,6 +107,7 @@
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "DELETE CUSTOMER";
+            groupBox4.Enter += groupBox4_Enter;
             // 
             // buttonDeleteCustomer
             // 
