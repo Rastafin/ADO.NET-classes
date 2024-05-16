@@ -15,6 +15,8 @@ Wymagania:
 2.	.NET SDK 8.0
 3.	SQL Server 2019
 4.	SQL Server Management Studio (SSMS)
+
+   
 Instalacja: 
 
 1.	Wczytaj skrypt scriptCreatingDB.sql aplikacji z folderu projektu OrderManagerApp\DataAccess\Data do SSMS.
