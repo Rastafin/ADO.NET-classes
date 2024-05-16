@@ -698,9 +698,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
+      "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\obj\\",
       "projectStyle": "PackageReference",
@@ -719,8 +719,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj"
+            "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj"
             }
           }
         }

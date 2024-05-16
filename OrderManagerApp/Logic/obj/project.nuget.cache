@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ano0HRbHqHgy9nwXF5viTy6lVHAPH0s0+dLb/Z5VqTSXKj7Pgf65dayn7hFykHfAyEI648zWvqsXdgEhfWS8FQ==",
+  "dgSpecHash": "foQ33iX3NQdFx39MMC+e1NslDFvx9k17/4RoPOAPOcMCK/IG04y98HGWW3JeUvr0nz2qs2lnAO8oupffQ0VWeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+  "projectFilePath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

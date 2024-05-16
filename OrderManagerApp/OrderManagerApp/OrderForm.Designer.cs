@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             buttonBack = new Button();
             groupBox4 = new GroupBox();
+            groupBox5 = new GroupBox();
+            buttonDeleteOrder = new Button();
             groupBox3 = new GroupBox();
             label4 = new Label();
             comboBoxOrderDelivered = new ComboBox();
@@ -41,21 +43,19 @@
             comboBoxOrderSent = new ComboBox();
             buttonConfirmOrderSent = new Button();
             groupBox2 = new GroupBox();
+            numericUpDown1QuantityOrders = new NumericUpDown();
+            label5 = new Label();
             label1 = new Label();
             comboBoxProducts = new ComboBox();
             buttonAddOrder = new Button();
             dataGridViewOrders = new DataGridView();
-            label5 = new Label();
-            numericUpDown1QuantityOrders = new NumericUpDown();
-            groupBox5 = new GroupBox();
-            buttonDeleteOrder = new Button();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1QuantityOrders).BeginInit();
-            groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             SuspendLayout();
             // 
             // buttonBack
@@ -81,6 +81,27 @@
             groupBox4.Size = new Size(444, 408);
             groupBox4.TabIndex = 9;
             groupBox4.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(buttonDeleteOrder);
+            groupBox5.Location = new Point(6, 155);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(432, 73);
+            groupBox5.TabIndex = 6;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "DELETE ORDER";
+            // 
+            // buttonDeleteOrder
+            // 
+            buttonDeleteOrder.BackColor = SystemColors.ActiveCaption;
+            buttonDeleteOrder.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            buttonDeleteOrder.Location = new Point(155, 22);
+            buttonDeleteOrder.Name = "buttonDeleteOrder";
+            buttonDeleteOrder.Size = new Size(115, 31);
+            buttonDeleteOrder.TabIndex = 2;
+            buttonDeleteOrder.Text = "DELETE";
+            buttonDeleteOrder.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -178,6 +199,22 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "ADD THE PRODUCTS";
             // 
+            // numericUpDown1QuantityOrders
+            // 
+            numericUpDown1QuantityOrders.Location = new Point(152, 79);
+            numericUpDown1QuantityOrders.Name = "numericUpDown1QuantityOrders";
+            numericUpDown1QuantityOrders.Size = new Size(121, 23);
+            numericUpDown1QuantityOrders.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(80, 81);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 15);
+            label5.TabIndex = 5;
+            label5.Text = "QUANTITY:";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -214,23 +251,23 @@
             dataGridViewOrders.AllowUserToResizeColumns = false;
             dataGridViewOrders.AllowUserToResizeRows = false;
             dataGridViewOrders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewOrders.Location = new Point(12, 12);
             dataGridViewOrders.MultiSelect = false;
             dataGridViewOrders.Name = "dataGridViewOrders";
@@ -239,43 +276,6 @@
             dataGridViewOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewOrders.Size = new Size(444, 174);
             dataGridViewOrders.TabIndex = 8;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(80, 81);
-            label5.Name = "label5";
-            label5.Size = new Size(66, 15);
-            label5.TabIndex = 5;
-            label5.Text = "QUANTITY:";
-            // 
-            // numericUpDown1QuantityOrders
-            // 
-            numericUpDown1QuantityOrders.Location = new Point(152, 79);
-            numericUpDown1QuantityOrders.Name = "numericUpDown1QuantityOrders";
-            numericUpDown1QuantityOrders.Size = new Size(121, 23);
-            numericUpDown1QuantityOrders.TabIndex = 6;
-            // 
-            // groupBox5
-            // 
-            groupBox5.Controls.Add(buttonDeleteOrder);
-            groupBox5.Location = new Point(6, 155);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(432, 73);
-            groupBox5.TabIndex = 6;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "DELETE ORDER";
-            // 
-            // buttonDeleteOrder
-            // 
-            buttonDeleteOrder.BackColor = SystemColors.ActiveCaption;
-            buttonDeleteOrder.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            buttonDeleteOrder.Location = new Point(155, 22);
-            buttonDeleteOrder.Name = "buttonDeleteOrder";
-            buttonDeleteOrder.Size = new Size(115, 31);
-            buttonDeleteOrder.TabIndex = 2;
-            buttonDeleteOrder.Text = "DELETE";
-            buttonDeleteOrder.UseVisualStyleBackColor = false;
             // 
             // OrderForm
             // 
@@ -291,15 +291,15 @@
             Text = "OrderForm";
             WindowState = FormWindowState.Minimized;
             groupBox4.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1QuantityOrders).EndInit();
-            groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             ResumeLayout(false);
         }
 
