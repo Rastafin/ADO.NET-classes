@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\OrderManagerApp",
+    "\\OrderManagerApp\\DataAccess",
+    "\\OrderManagerApp\\DataAccess\\Repositories"
   ],
-  "SelectedNode": "\\OrderManagerApp.sln",
+  "SelectedNode": "\\OrderManagerApp\\DataAccess\\Repositories\\OrderRepository.cs",
   "PreviewInSolutionExplorer": false
 }

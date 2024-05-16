@@ -680,9 +680,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+      "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
       "projectStyle": "PackageReference",
@@ -701,11 +701,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
+            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
             }
           }
         }

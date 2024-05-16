@@ -174,12 +174,51 @@ namespace DataAccess.Repositories
                 throw new Exception("An error occurred while trying to delete order." + ex.Message);
             }
 
-
-
-
-
         }
 
+        public void ChangeStatus(Order order)
+        {
+
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+
+                    connection.Open();
+                    string query = "SELECT * FROM ORDERS WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", order.Id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+                        if (dataSet.Tables["Orders"].Rows.Count == 1)
+                        {
+                            DataRow dataRow = dataSet.Tables["Orders"]!.Rows[0];
+                            dataRow["OrderStatus"] = order.Status;
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Orders");
+
+                        }
+                        else
+                        {
+                            throw new Exception("Order with specified ID not found.");
+                        }
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("An error occurred while trying to update order. " + ex.Message);
+            }
+        }
     }
 }
 

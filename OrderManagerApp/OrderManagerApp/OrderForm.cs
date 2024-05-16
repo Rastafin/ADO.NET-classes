@@ -24,5 +24,35 @@ namespace GUI
             this.Hide();
             mainForm.ShowDialog();
         }
+
+        private void buttonAddOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDeleteOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConfirmOrderSent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConfirmOrderDelivered_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxOrderSent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxOrderDelivered_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

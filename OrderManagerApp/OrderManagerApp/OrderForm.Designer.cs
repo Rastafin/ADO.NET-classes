@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             buttonBack = new Button();
             groupBox4 = new GroupBox();
             groupBox5 = new GroupBox();
@@ -102,6 +102,7 @@
             buttonDeleteOrder.TabIndex = 2;
             buttonDeleteOrder.Text = "DELETE";
             buttonDeleteOrder.UseVisualStyleBackColor = false;
+            buttonDeleteOrder.Click += buttonDeleteOrder_Click;
             // 
             // groupBox3
             // 
@@ -132,6 +133,7 @@
             comboBoxOrderDelivered.Name = "comboBoxOrderDelivered";
             comboBoxOrderDelivered.Size = new Size(121, 23);
             comboBoxOrderDelivered.TabIndex = 3;
+            comboBoxOrderDelivered.SelectedIndexChanged += comboBoxOrderDelivered_SelectedIndexChanged;
             // 
             // buttonConfirmOrderDelivered
             // 
@@ -143,6 +145,7 @@
             buttonConfirmOrderDelivered.TabIndex = 2;
             buttonConfirmOrderDelivered.Text = "CONFIRM";
             buttonConfirmOrderDelivered.UseVisualStyleBackColor = false;
+            buttonConfirmOrderDelivered.Click += buttonConfirmOrderDelivered_Click;
             // 
             // groupBox1
             // 
@@ -173,6 +176,7 @@
             comboBoxOrderSent.Name = "comboBoxOrderSent";
             comboBoxOrderSent.Size = new Size(121, 23);
             comboBoxOrderSent.TabIndex = 3;
+            comboBoxOrderSent.SelectedIndexChanged += comboBoxOrderSent_SelectedIndexChanged;
             // 
             // buttonConfirmOrderSent
             // 
@@ -184,6 +188,7 @@
             buttonConfirmOrderSent.TabIndex = 2;
             buttonConfirmOrderSent.Text = "CONFIRM";
             buttonConfirmOrderSent.UseVisualStyleBackColor = false;
+            buttonConfirmOrderSent.Click += buttonConfirmOrderSent_Click;
             // 
             // groupBox2
             // 
@@ -243,6 +248,7 @@
             buttonAddOrder.TabIndex = 2;
             buttonAddOrder.Text = "ADD";
             buttonAddOrder.UseVisualStyleBackColor = false;
+            buttonAddOrder.Click += buttonAddOrder_Click;
             // 
             // dataGridViewOrders
             // 
@@ -251,23 +257,23 @@
             dataGridViewOrders.AllowUserToResizeColumns = false;
             dataGridViewOrders.AllowUserToResizeRows = false;
             dataGridViewOrders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = SystemColors.Control;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle11.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = SystemColors.Window;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
+            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle12;
             dataGridViewOrders.Location = new Point(12, 12);
             dataGridViewOrders.MultiSelect = false;
             dataGridViewOrders.Name = "dataGridViewOrders";

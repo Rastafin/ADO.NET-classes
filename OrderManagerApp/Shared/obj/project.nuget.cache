@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yBMOoM0v4Mv+0DKW+T3szk1pyeLWaiYbIdDhFcxARp7hkgSL0uC1PAL5FgorJhAcgnXTT5eKLmxkCYg4ofBlyw==",
+  "dgSpecHash": "p7bsAKwROrRl1ppjztqrNC3qEXmHzW6dyR8ZJtJ8j3hK/bNdiSCfYA5HNTSeLJK3vdPdqVAw4PXOuex1NoFr0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
+  "projectFilePath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Przemek\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
