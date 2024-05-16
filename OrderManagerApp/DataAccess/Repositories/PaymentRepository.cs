@@ -47,7 +47,7 @@ namespace DataAccess.Repositories
             }
             catch(Exception ex)
             {
-                throw new Exception("An error occurred while calculating total amount for order. " + ex.Message);
+                throw new Exception($"An error occurred while calculating total amount for order: {orderId}. " + ex.Message);
             }
         }
 
@@ -277,7 +277,7 @@ namespace DataAccess.Repositories
                         }
                         else
                         {
-                            throw new Exception($"Payment with Id: {paymentId} cannot be found");
+                            throw new Exception($"Payment with Id: {paymentId} cannot be found.");
                         }
                     }
                 }

@@ -35,9 +35,9 @@ namespace GUI
             {
                 dataGridViewProducts.DataSource = _productService.GetAllProducts();
                 dataGridViewProducts.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                dataGridViewProducts.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                dataGridViewProducts.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                dataGridViewProducts.Columns["StockQuantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                //dataGridViewProducts.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                //dataGridViewProducts.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                //dataGridViewProducts.Columns["StockQuantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {

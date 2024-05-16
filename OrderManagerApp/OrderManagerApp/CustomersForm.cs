@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,12 @@ namespace GUI
     public partial class CustomersForm : Form
     {
         private readonly ICustomerService _customerService;
+        private readonly IValidationService _validationService;
         public CustomersForm()
         {
             InitializeComponent();
             _customerService = new CustomerService();
+            _validationService = new ValidationService();
         }
 
         private void refreshDGV()
@@ -58,9 +61,9 @@ namespace GUI
 
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
-            if (textBoxFirstName.Text == "" || textBoxLastName.Text == "" || textBoxEmail.Text == "")
+            if(!_validationService.ValidateCustomerAddOrEditProcess(textBoxFirstName.Text, textBoxLastName.Text, textBoxEmail.Text, out string message))
             {
-                MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -122,26 +125,34 @@ namespace GUI
                     }
 
                     int customerId = (int)selectedRow.Cells["Id"].Value;
+                    string? existingEmail = selectedRow.Cells["Email"].Value.ToString();
+
                     string firstName = textBoxEditFirstName.Text;
                     string lastName = textBoxEditLastName.Text;
-                    string email = textBoxEditEmail.Text;
+                    string newEmail = textBoxEditEmail.Text;
 
-                    if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
+                    /*if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
                     {
                         MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
+                    }*/
 
                     if (customerId < 1)
                     {
                         throw new Exception("Invalid customer ID.");
                     }
 
+                    if(!_validationService.ValidateCustomerAddOrEditProcess(firstName, lastName, newEmail, out string message, existingEmail!))
+                    {
+                        MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     _customerService.UpdateCustomer(new Customer(
                         customerId,
                         firstName,
                         lastName,
-                        email));
+                        newEmail));
 
                     refreshDGV();
 
@@ -180,6 +191,10 @@ namespace GUI
 
                     MessageBox.Show("Customer deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show($"This Customer cannot be deleted. Please check if the customer has an active order.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

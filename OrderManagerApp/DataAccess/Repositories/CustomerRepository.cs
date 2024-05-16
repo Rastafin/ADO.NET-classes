@@ -130,8 +130,6 @@ namespace DataAccess.Repositories
 
         public void DeleteCustomer(int customerId)
         {
-            try
-            {
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
@@ -159,11 +157,6 @@ namespace DataAccess.Repositories
                         }
                     }
                 }
-            }
-            catch(Exception ex)
-            {
-                throw new Exception("An error occurred while trying to delete customer. " + ex.Message);
-            }
         }
 
         public Customer GetCustomerByOrderId(int orderId)

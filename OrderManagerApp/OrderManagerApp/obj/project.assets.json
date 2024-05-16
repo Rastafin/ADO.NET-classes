@@ -693,19 +693,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Przemek\\.nuget\\packages\\": {}
+    "C:\\Users\\krzys\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
+      "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
       "projectName": "GUI",
+<<<<<<< HEAD
       "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\obj\\",
+=======
+      "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\GUI.csproj",
+      "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
+      "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\OrderManagerApp\\obj\\",
+>>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -719,8 +730,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj"
+            "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj"
             }
           }
         }

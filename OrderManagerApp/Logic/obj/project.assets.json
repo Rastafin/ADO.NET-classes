@@ -675,19 +675,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Przemek\\.nuget\\packages\\": {}
+    "C:\\Users\\krzys\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
       "projectName": "Logic",
+<<<<<<< HEAD
       "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
+=======
+      "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+      "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
+      "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
+>>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -701,11 +712,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
+            "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
+            "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
             }
           }
         }

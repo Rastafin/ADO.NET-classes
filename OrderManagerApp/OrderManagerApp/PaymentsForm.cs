@@ -169,7 +169,14 @@ namespace GUI
 
                     Payment payment = _paymentService.GetPaymentById(paymentId);
 
-                    payment.Amount = _paymentService.CalculateTotalAmountForOrder(paymentId);
+                    Order orderFromPaymentId = _orderService.GetOrderByPaymentId(paymentId);
+                    if(orderFromPaymentId.Status == OrderStatus.Delivered)
+                    {
+                        MessageBox.Show("This payment cannot be withdrawn becouse the assigned order has already been sent.", "Refusal", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        return;
+                    }
+
+                    payment.Amount = _paymentService.CalculateTotalAmountForOrder(orderFromPaymentId.Id);
                     payment.Status = PaymentStatus.Waiting;
                     payment.PaymentDate = DateTime.Now;
 
