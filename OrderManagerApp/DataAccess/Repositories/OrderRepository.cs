@@ -7,6 +7,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Models;
+using DataAccess.Models.Enums;
 
 namespace DataAccess.Repositories
 {
@@ -24,7 +26,7 @@ namespace DataAccess.Repositories
                 {
                     connection.Open();
 
-                    string ordersSql = "SELECT Id FROM Orders";
+                    string ordersSql = "SELECT Id FROM Orders WHERE Status = 1";
                     DataTable ordersTable = new DataTable();
 
                     using (var ordersCommand = new SqlCommand(ordersSql, connection))
@@ -52,6 +54,49 @@ namespace DataAccess.Repositories
             }
 
             return missingOrderIds;
+        }
+
+        public Order GetOrderByPaymentId(int paymentId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = @"SELECT Orders.* FROM Orders
+                        INNER JOIN Payments ON Orders.Id = Payments.OrderId
+                        WHERE Payments.Id = @PaymentId;";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@PaymentId", paymentId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+                        if (dataSet.Tables["Orders"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["Orders"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            int customerId = (int)row["CustomerId"];
+                            DateTime orderDate = (DateTime)row["OrderDate"];
+                            OrderStatus orderStatus = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
+
+                            return new Order(id, customerId, orderDate, orderStatus);
+                        }
+                        else
+                        {
+                            throw new Exception($"Order with PaymentId: {paymentId} cannot be found.");
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get order by PaymentId. " + (ex.Message));
+            }
         }
     }
 }
