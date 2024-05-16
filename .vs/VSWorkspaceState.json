@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\OrderManagerApp",
+    "\\OrderManagerApp\\DataAccess",
+    "\\OrderManagerApp\\DataAccess\\Data",
+    "\\OrderManagerApp\\DataAccess\\Models",
+    "\\OrderManagerApp\\DataAccess\\Repositories",
+    "\\OrderManagerApp\\OrderManagerApp"
+  ],
+  "SelectedNode": "\\OrderManagerApp\\OrderManagerApp\\ProductsForm.cs",
+  "PreviewInSolutionExplorer": false
+}

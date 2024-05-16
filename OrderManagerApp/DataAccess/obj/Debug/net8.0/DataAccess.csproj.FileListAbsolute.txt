@@ -12,3 +12,17 @@ C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAcce
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll.config
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\Przemek\Source\Repos\ADO.NET-classes\OrderManagerApp\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
