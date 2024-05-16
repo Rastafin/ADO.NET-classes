@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9gZjZrm8MchFvZXTMVJLc/lgJdRebM5N/xTl3B5akBEJl67sNHMZ0JHOCDiyXchtrTGhkrmrURRoIuYSD88YlA==",
+  "dgSpecHash": "uhcdmKgp9UO/c5nVabsCOD7L+a89ey0nO4Y89SO0+jc1Sv2oqmPMFjr+ax/vsohShv0pQ7xRzeaOYk66h9xmiQ==",
   "success": true,
   "projectFilePath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
   "expectedPackageFiles": [
@@ -17,12 +17,5 @@
     "C:\\Users\\krzys\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\krzys\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

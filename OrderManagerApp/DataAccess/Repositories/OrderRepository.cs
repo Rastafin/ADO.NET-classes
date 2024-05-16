@@ -56,40 +56,24 @@ namespace DataAccess.Repositories
             return missingOrderIds;
         }
 
-<<<<<<< HEAD
+
         public List<Order> GetAllOrders()
         {
             List<Order> orders = new List<Order>();
 
-=======
-        public Order GetOrderByPaymentId(int paymentId)
-        {
->>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
             try
             {
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-<<<<<<< HEAD
+
                     string sql = "SELECT * FROM Orders";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
-=======
-                    string sql = @"SELECT Orders.* FROM Orders
-                        INNER JOIN Payments ON Orders.Id = Payments.OrderId
-                        WHERE Payments.Id = @PaymentId;";
-
-                    using (var command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.AddWithValue("@PaymentId", paymentId);
-
->>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Orders");
-
-<<<<<<< HEAD
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
                             int id = (int)row["Id"];
@@ -111,6 +95,52 @@ namespace DataAccess.Repositories
             return orders;
 
         }
+
+        public Order GetOrderByPaymentId(int paymentId)
+        {
+
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+
+                    string sql = @"SELECT Orders.* FROM Orders
+                        INNER JOIN Payments ON Orders.Id = Payments.OrderId
+                        WHERE Payments.Id = @PaymentId;";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@PaymentId", paymentId);
+
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+                        if (dataSet.Tables["Orders"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["Orders"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            int customerId = (int)row["CustomerId"];
+                            DateTime orderDate = (DateTime)row["OrderDate"];
+                            OrderStatus orderStatus = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
+
+                            return new Order(id, customerId, orderDate, orderStatus);
+                        }
+                        else
+                        {
+                            throw new Exception($"Order with PaymentId: {paymentId} cannot be found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get order by PaymentId. " + (ex.Message));
+            }
+        }
+
         public void AddToOrder(Order order)
         {
             try
@@ -143,10 +173,8 @@ namespace DataAccess.Repositories
             {
                 throw new Exception("An error occurred while trying to add new orders. " + ex.Message);
             }
-
-
         }
-    
+
 
         public void DeleteOrder(int Id)
         {
@@ -177,14 +205,8 @@ namespace DataAccess.Repositories
                         {
                             throw new Exception("Order with specified ID not found.");
                         }
-
-
-
                     }
-
-
                 }
-
             }
             catch (Exception ex)
             {
@@ -224,41 +246,14 @@ namespace DataAccess.Repositories
                         {
                             throw new Exception("Order with specified ID not found.");
                         }
-
                     }
-
                 }
-
             }
             catch (Exception ex)
             {
-
                 throw new Exception("An error occurred while trying to update order. " + ex.Message);
-=======
-                        if (dataSet.Tables["Orders"]!.Rows.Count > 0)
-                        {
-                            DataRow row = dataSet.Tables["Orders"]!.Rows[0];
-
-                            int id = (int)row["Id"];
-                            int customerId = (int)row["CustomerId"];
-                            DateTime orderDate = (DateTime)row["OrderDate"];
-                            OrderStatus orderStatus = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
-
-                            return new Order(id, customerId, orderDate, orderStatus);
-                        }
-                        else
-                        {
-                            throw new Exception($"Order with PaymentId: {paymentId} cannot be found.");
-                        }
-                    }
-                }
             }
-            catch(Exception ex)
-            {
-                throw new Exception("An error occurred while trying to get order by PaymentId. " + (ex.Message));
->>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
-            }
-        }
+}
     }
 }
 
