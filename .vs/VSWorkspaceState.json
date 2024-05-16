@@ -3,8 +3,9 @@
     "",
     "\\OrderManagerApp",
     "\\OrderManagerApp\\DataAccess",
-    "\\OrderManagerApp\\DataAccess\\Repositories"
+    "\\OrderManagerApp\\DataAccess\\Repositories",
+    "\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces"
   ],
-  "SelectedNode": "\\OrderManagerApp\\DataAccess\\Repositories\\OrderRepository.cs",
+  "SelectedNode": "\\OrderManagerApp\\DataAccess\\Repositories\\Interfaces\\IProductRepository.cs",
   "PreviewInSolutionExplorer": false
 }

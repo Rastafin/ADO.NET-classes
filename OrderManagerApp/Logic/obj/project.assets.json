@@ -684,7 +684,7 @@
       "projectName": "Logic",
       "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Przemek\\Source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
+      "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -743,5 +743,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

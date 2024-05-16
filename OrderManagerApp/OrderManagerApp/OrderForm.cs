@@ -54,5 +54,10 @@ namespace GUI
         {
 
         }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
