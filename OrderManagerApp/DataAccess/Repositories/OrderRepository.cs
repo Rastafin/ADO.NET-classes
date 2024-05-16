@@ -56,13 +56,26 @@ namespace DataAccess.Repositories
             return missingOrderIds;
         }
 
+<<<<<<< HEAD
+        public List<Order> GetAllOrders()
+        {
+            List<Order> orders = new List<Order>();
+
+=======
         public Order GetOrderByPaymentId(int paymentId)
         {
+>>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
             try
             {
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
+<<<<<<< HEAD
+                    string sql = "SELECT * FROM Orders";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+=======
                     string sql = @"SELECT Orders.* FROM Orders
                         INNER JOIN Payments ON Orders.Id = Payments.OrderId
                         WHERE Payments.Id = @PaymentId;";
@@ -71,10 +84,157 @@ namespace DataAccess.Repositories
                     {
                         command.Parameters.AddWithValue("@PaymentId", paymentId);
 
+>>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Orders");
 
+<<<<<<< HEAD
+                        foreach (DataRow row in dataSet.Tables[0].Rows)
+                        {
+                            int id = (int)row["Id"];
+                            int customerId = (int)row["CustomerId"];
+                            DateTime dateTime = (DateTime)row["OrderDate"];
+                            OrderStatus orderStatus = (OrderStatus)row["OrderStatus"];
+
+                            Order order = new Order(id, customerId, dateTime, orderStatus);
+                            orders.Add(order);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get all orders. " + ex.Message);
+            }
+
+            return orders;
+
+        }
+        public void AddToOrder(Order order)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM ORDERS";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+                        DataRow newRow = dataSet.Tables[0].NewRow();
+                        newRow["CustomerId"] = order.CustomerId;
+                        newRow["OrderDate"] = order.OrderDate;
+                        newRow["OrderSatus"] = order.Status;
+
+                        dataSet.Tables[0].Rows.Add(newRow);
+
+                        SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                        adapter.Update(dataSet, "Orders");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to add new orders. " + ex.Message);
+            }
+
+
+        }
+    
+
+        public void DeleteOrder(int Id)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM Orders WHERE Id= @Id ";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", Id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+
+                        if (dataSet.Tables["Orders"]!.Rows.Count == 1)
+                        {
+                            dataSet.Tables["Orders"]!.Rows[0].Delete();
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Orders");
+                        }
+                        else
+                        {
+                            throw new Exception("Order with specified ID not found.");
+                        }
+
+
+
+                    }
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to delete order." + ex.Message);
+            }
+
+        }
+
+        public void ChangeStatus(Order order)
+        {
+
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+
+                    connection.Open();
+                    string query = "SELECT * FROM ORDERS WHERE Id = @Id";
+
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", order.Id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+                        if (dataSet.Tables["Orders"].Rows.Count == 1)
+                        {
+                            DataRow dataRow = dataSet.Tables["Orders"]!.Rows[0];
+                            dataRow["OrderStatus"] = order.Status;
+
+                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                            adapter.Update(dataSet, "Orders");
+
+                        }
+                        else
+                        {
+                            throw new Exception("Order with specified ID not found.");
+                        }
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("An error occurred while trying to update order. " + ex.Message);
+=======
                         if (dataSet.Tables["Orders"]!.Rows.Count > 0)
                         {
                             DataRow row = dataSet.Tables["Orders"]!.Rows[0];
@@ -96,7 +256,9 @@ namespace DataAccess.Repositories
             catch(Exception ex)
             {
                 throw new Exception("An error occurred while trying to get order by PaymentId. " + (ex.Message));
+>>>>>>> 14ca6cc35a687ffcde734456a6549fcb2cf8009a
             }
         }
     }
 }
+
