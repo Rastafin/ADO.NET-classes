@@ -112,7 +112,7 @@ namespace DataAccess.Repositories
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Products");
 
-                        if (dataSet.Tables["Products"].Rows.Count==1)
+                        if (dataSet.Tables["Products"]!.Rows.Count==1)
                         {
                             DataRow dataRow = dataSet.Tables["Products"]!.Rows[0];
                             dataRow["Name"] = product.Name;

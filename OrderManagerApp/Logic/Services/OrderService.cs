@@ -1,4 +1,5 @@
-﻿using DataAccess.Repositories;
+﻿using DataAccess.Models;
+using DataAccess.Repositories;
 using DataAccess.Repositories.Interfaces;
 using Logic.Services.Interfaces;
 using System;
@@ -22,6 +23,18 @@ namespace Logic.Services
             catch (Exception ex)
             {
                 throw new Exception("An error occurred in GetMissingOrderIdsInPayments method. " + ex.Message);
+            }
+        }
+
+        public Order GetOrderByPaymentId(int paymentId)
+        {
+            try
+            {
+                return _orderRepository.GetOrderByPaymentId(paymentId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetOrderByPaymentId method. " + ex.Message);
             }
         }
     }

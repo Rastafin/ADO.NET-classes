@@ -52,14 +52,7 @@ namespace Logic.Services
 
         public void DeleteCustomer(int customerId)
         {
-            try
-            {
                 _customerRepository.DeleteCustomer(customerId);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred in DeleteCustomer method. " + ex.Message);
-            }
         }
     }
 }

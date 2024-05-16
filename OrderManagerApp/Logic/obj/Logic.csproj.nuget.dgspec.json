@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {}
+    "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+    "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\obj\\",
+        "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
+        "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,17 +78,21 @@
         }
       }
     },
-    "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
+    "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
+        "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
+        "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,11 +106,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
+              "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
+              "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj"
               }
             }
           }
@@ -141,17 +149,21 @@
         }
       }
     },
-    "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
+    "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
+        "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
+        "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -165,8 +177,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Przemek\\source\\Repos\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
+              "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
               }
             }
           }
