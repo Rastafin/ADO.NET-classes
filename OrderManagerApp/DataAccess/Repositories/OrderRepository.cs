@@ -56,6 +56,7 @@ namespace DataAccess.Repositories
             return missingOrderIds;
         }
 
+
         public List<Order> GetAllOrders()
         {
             List<Order> orders = new List<Order>();
@@ -102,7 +103,6 @@ namespace DataAccess.Repositories
             {
                 using (var connection = _connectionFactory.CreateConnection())
                 {
-
                     connection.Open();
 
                     string sql = @"SELECT Orders.* FROM Orders
@@ -111,7 +111,6 @@ namespace DataAccess.Repositories
 
                     using (var command = new SqlCommand(sql, connection))
                     {
-
                         command.Parameters.AddWithValue("@PaymentId", paymentId);
 
 
@@ -141,7 +140,10 @@ namespace DataAccess.Repositories
                 throw new Exception("An error occurred while trying to get order by PaymentId. " + (ex.Message));
             }
         }
-                public void AddToOrder(Order order)
+
+
+        public void AddToOrder(Order order)
+
         {
             try
             {
@@ -173,10 +175,8 @@ namespace DataAccess.Repositories
             {
                 throw new Exception("An error occurred while trying to add new orders. " + ex.Message);
             }
-
-
         }
-    
+
 
         public void DeleteOrder(int Id)
         {
@@ -207,14 +207,8 @@ namespace DataAccess.Repositories
                         {
                             throw new Exception("Order with specified ID not found.");
                         }
-
-
-
                     }
-
-
                 }
-
             }
             catch (Exception ex)
             {
@@ -254,16 +248,13 @@ namespace DataAccess.Repositories
                         {
                             throw new Exception("Order with specified ID not found.");
                         }
-
                     }
-
                 }
-
             }
             catch (Exception ex)
             {
-
                 throw new Exception("An error occurred while trying to update order. " + ex.Message);
+
 
             }
         }
