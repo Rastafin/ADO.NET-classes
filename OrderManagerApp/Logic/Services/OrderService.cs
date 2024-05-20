@@ -1,7 +1,9 @@
 ﻿using DataAccess.Models;
+using DataAccess.Models.Enums;
 using DataAccess.Repositories;
 using DataAccess.Repositories.Interfaces;
 using Logic.Services.Interfaces;
+using Shared.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +15,13 @@ namespace Logic.Services
     public class OrderService() : IOrderService
     {
         private readonly IOrderRepository _orderRepository = new OrderRepository();
+        private readonly ICustomerRepository _customerRepository = new CustomerRepository();
 
-        public void AddToOrder(Order order)
+        public int AddOrder(Order order)
         {
             try
             {
-                _orderRepository.AddToOrder(order);
+                return _orderRepository.AddOrder(order);
             }
             catch (Exception ex)
             {
@@ -26,11 +29,11 @@ namespace Logic.Services
             }
         }
 
-        public void ChangeStatus(Order order)
+        public void ChangeStatus(int orderId, OrderStatus orderStatus)
         {
             try
             {
-                _orderRepository.ChangeStatus(order);
+                _orderRepository.ChangeStatus(orderId, orderStatus);
             }
             catch (Exception ex)
             {
@@ -62,6 +65,37 @@ namespace Logic.Services
             }
         }
 
+        public List<OrderViewModel> GetAllOrderViewModels()
+        {
+            try
+            {
+                List<Order> orders = _orderRepository.GetAllOrders();
+
+                List<OrderViewModel> orderViewModels = new List<OrderViewModel>();
+
+                foreach (Order order in orders)
+                {
+                    Customer customer = _customerRepository.GetCustomerByOrderId(order.Id);
+
+                    OrderViewModel orderViewModel = new OrderViewModel
+                    {
+                        Id = order.Id,
+                        CustomerName = customer.FirstName + " " + customer.LastName,
+                        OrderDate = order.OrderDate,
+                        Status = order.Status
+                    };
+
+                    orderViewModels.Add(orderViewModel);
+                }
+
+                return orderViewModels;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetAllOrderViewModels method. " + ex.Message);
+            }
+        }
+
         public List<int> GetMissingOrderIdsInPayments()
         {
             try
@@ -74,6 +108,18 @@ namespace Logic.Services
             }
         }
 
+        public Order GetOrderById(int orderId)
+        {
+            try
+            {
+                return _orderRepository.GetOrderById(orderId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetOrderById method. " + ex.Message);
+            }
+        }
+
         public Order GetOrderByPaymentId(int paymentId)
         {
             try
@@ -83,6 +129,18 @@ namespace Logic.Services
             catch (Exception ex)
             {
                 throw new Exception("An error occurred in GetOrderByPaymentId method. " + ex.Message);
+            }
+        }
+
+        public List<int> GetOrdersToDeliverIds()
+        {
+            try
+            {
+                return _orderRepository.GetOrdersToDeliverIds();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetOrdersToDeliverIds method. " + ex.Message);
             }
         }
     }

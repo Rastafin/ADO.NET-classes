@@ -172,7 +172,7 @@ namespace GUI
                     Order orderFromPaymentId = _orderService.GetOrderByPaymentId(paymentId);
                     if(orderFromPaymentId.Status == OrderStatus.Delivered)
                     {
-                        MessageBox.Show("This payment cannot be withdrawn becouse the assigned order has already been sent.", "Refusal", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("This payment cannot be withdrawn becouse the assigned order has already been delivered.", "Refusal", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         return;
                     }
 

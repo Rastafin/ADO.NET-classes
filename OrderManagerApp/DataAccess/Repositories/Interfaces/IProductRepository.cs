@@ -13,5 +13,7 @@ namespace DataAccess.Repositories.Interfaces
         void AddProduct(Product product);
         void UpdateProduct(Product product);
         void DeleteProduct(int productId);
+        List<Product> GetAllAvailableProducts();
+        Product GetProduct(int productId);
     }
 }

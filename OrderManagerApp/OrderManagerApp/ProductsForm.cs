@@ -101,7 +101,7 @@ namespace GUI
                     decimal Price = numericUpDown3PriceEdit.Value;
                     int StockQuantity = (int)numericUpDown4StockQunatityEdit.Value;
 
-                    if (string.IsNullOrEmpty(Name) || Price == 0.00m || StockQuantity == 0)
+                    if (string.IsNullOrEmpty(Name) || Price == 0.00m || StockQuantity < 0)
                     {
                         MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;

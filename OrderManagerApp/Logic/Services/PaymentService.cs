@@ -104,7 +104,7 @@ namespace Logic.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred in GetMaxSettlementAmount method. " + ex.Message);
+                throw new Exception("An error occurred in GetPaymentById method. " + ex.Message);
             }
         }
 

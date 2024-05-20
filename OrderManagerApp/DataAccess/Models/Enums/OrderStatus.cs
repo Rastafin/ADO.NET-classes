@@ -9,7 +9,7 @@ namespace DataAccess.Models.Enums
     public enum OrderStatus
     {
         Processed = 0,
-        Sent = 1,
+        Approved = 1,
         Delivered = 2
     }
 }
