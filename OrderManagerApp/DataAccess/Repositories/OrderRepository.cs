@@ -66,7 +66,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Orders";
+                    string sql = "SELECT * FROM Orders ORDER BY OrderDate DESC";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -79,7 +79,7 @@ namespace DataAccess.Repositories
                             int id = (int)row["Id"];
                             int customerId = (int)row["CustomerId"];
                             DateTime dateTime = (DateTime)row["OrderDate"];
-                            OrderStatus orderStatus = (OrderStatus)row["OrderStatus"];
+                            OrderStatus orderStatus = (OrderStatus)row["Status"];
 
                             Order order = new Order(id, customerId, dateTime, orderStatus);
                             orders.Add(order);
@@ -93,7 +93,6 @@ namespace DataAccess.Repositories
             }
 
             return orders;
-
         }
 
         public Order GetOrderByPaymentId(int paymentId)
@@ -142,7 +141,7 @@ namespace DataAccess.Repositories
         }
 
 
-        public void AddToOrder(Order order)
+        public int AddOrder(Order order)
 
         {
             try
@@ -150,30 +149,38 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM ORDERS";
+                    SqlTransaction transaction = connection.BeginTransaction();
 
-                    using (var command = new SqlCommand(sql, connection))
+                    try
                     {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        string insertOrderQuery = @"
+                            INSERT INTO Orders (CustomerId, OrderDate, Status)
+                            VALUES (@CustomerId, @OrderDate, @OrderStatus);
+                            SELECT SCOPE_IDENTITY();";
 
-                        DataSet dataSet = new DataSet();
-                        adapter.Fill(dataSet, "Orders");
+                        using (var command = new SqlCommand(insertOrderQuery, connection, transaction))
+                        {
+                            command.Parameters.AddWithValue("@CustomerId", order.CustomerId);
+                            command.Parameters.AddWithValue("@OrderDate", order.OrderDate);
+                            command.Parameters.AddWithValue("@OrderStatus", order.Status);
 
-                        DataRow newRow = dataSet.Tables[0].NewRow();
-                        newRow["CustomerId"] = order.CustomerId;
-                        newRow["OrderDate"] = order.OrderDate;
-                        newRow["OrderSatus"] = order.Status;
+                            int orderId = Convert.ToInt32(command.ExecuteScalar());
 
-                        dataSet.Tables[0].Rows.Add(newRow);
+                            transaction.Commit();
 
-                        SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-                        adapter.Update(dataSet, "Orders");
+                            return orderId;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw new Exception("An error occurred while trying to add new order and get order ID. " + ex.Message);
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while trying to add new orders. " + ex.Message);
+                throw new Exception("An error occurred while trying to add new order. " + ex.Message);
             }
         }
 
@@ -217,9 +224,8 @@ namespace DataAccess.Repositories
 
         }
 
-        public void ChangeStatus(Order order)
-        {
-
+        public void ChangeStatus(int orderId, OrderStatus orderStatus)
+        {  
             try
             {
                 using (var connection = _connectionFactory.CreateConnection())
@@ -230,15 +236,16 @@ namespace DataAccess.Repositories
 
                     using (var command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", order.Id);
+                        command.Parameters.AddWithValue("@Id", orderId);
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Orders");
 
-                        if (dataSet.Tables["Orders"].Rows.Count == 1)
+                        if (dataSet.Tables["Orders"]!.Rows.Count == 1)
                         {
                             DataRow dataRow = dataSet.Tables["Orders"]!.Rows[0];
-                            dataRow["OrderStatus"] = order.Status;
+                            dataRow["Status"] = orderStatus;
+                            dataRow["OrderDate"] = DateTime.Now;
 
                             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
                             adapter.Update(dataSet, "Orders");
@@ -254,9 +261,84 @@ namespace DataAccess.Repositories
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while trying to update order. " + ex.Message);
-
-
             }
+        }
+
+        public Order GetOrderById(int orderId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Orders WHERE Id = @OrderId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderId", orderId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Order");
+
+                        if (dataSet.Tables["Order"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["Order"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            int customerId = (int)row["CustomerId"];
+                            DateTime orderDate = (DateTime)row["OrderDate"];
+                            OrderStatus status = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
+
+                            return new Order(id, customerId, orderDate, status);
+                        }
+                        else
+                        {
+                            throw new Exception($"Payment with Id: {orderId} cannot be found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while trying to get order with Id: {orderId}. " + ex.Message);
+            }
+        }
+
+        public List<int> GetOrdersToDeliverIds()
+        {
+            List<int> orderIds = new List<int>();
+
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = @"SELECT Orders.* FROM Orders
+                            INNER JOIN Payments ON Payments.OrderId = Orders.Id
+                            WHERE Payments.Status = 0 AND Orders.Status = 1;";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "Orders");
+
+                        foreach (DataRow row in dataSet.Tables[0].Rows)
+                        {
+                            int id = (int)row["Id"];
+
+                            orderIds.Add(id);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while trying to get all order to deliver Ids. " + ex.Message);
+            }
+
+            return orderIds;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using DataAccess.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,12 @@ namespace DataAccess.Repositories.Interfaces
 
 
         public List<Order> GetAllOrders();
-        public void AddToOrder(Order order);
+        public int AddOrder(Order order);
         public void DeleteOrder(int Id);
-        public void ChangeStatus(Order order);
+        public void ChangeStatus(int orderId, OrderStatus orderStatus);
 
         Order GetOrderByPaymentId(int paymentId);
-
+        Order GetOrderById(int orderId);
+        List<int> GetOrdersToDeliverIds();
     }
 }

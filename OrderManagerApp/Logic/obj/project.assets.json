@@ -227,7 +227,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "DataAccess": "1.0.0"
+          "DataAccess": "1.0.0",
+          "System.Data.SqlClient": "4.8.6"
         },
         "compile": {
           "bin/placeholder/Shared.dll": {}
@@ -671,7 +672,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "DataAccess >= 1.0.0",
-      "Shared >= 1.0.0"
+      "Shared >= 1.0.0",
+      "System.Data.SqlClient >= 4.8.6"
     ]
   },
   "packageFolders": {
@@ -729,6 +731,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.6, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -748,13 +756,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Logic\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

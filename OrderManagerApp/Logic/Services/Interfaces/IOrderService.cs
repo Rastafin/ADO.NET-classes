@@ -1,4 +1,6 @@
 ﻿using DataAccess.Models;
+using DataAccess.Models.Enums;
+using Shared.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +13,12 @@ namespace Logic.Services.Interfaces
     {
         List<int> GetMissingOrderIdsInPayments();
         public List<Order> GetAllOrders();
-        public void ChangeStatus(Order order);
+        public void ChangeStatus(int orderId, OrderStatus orderStatus);
         Order GetOrderByPaymentId(int paymentId);
-        public void AddToOrder(Order order);
+        public int AddOrder(Order order);
         public void DeleteOrder(int Id);
-        
-        
-
+        public List<OrderViewModel> GetAllOrderViewModels();
+        Order GetOrderById(int orderId);
+        List<int> GetOrdersToDeliverIds();
     }
 }

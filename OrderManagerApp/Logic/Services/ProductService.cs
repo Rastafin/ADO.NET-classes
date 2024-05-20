@@ -61,5 +61,29 @@ namespace Logic.Services
                 throw new Exception("An error occurred in UpdateProduct method. " + ex.Message);
             }
         }
+
+        public List<Product> GetAllAvailableProducts()
+        {
+            try
+            {
+                return _productRepository.GetAllAvailableProducts();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetAllAvailableProducts method. " + ex.Message);
+            }
+        }
+
+        public Product GetProduct(int productId)
+        {
+            try
+            {
+                return _productRepository.GetProduct(productId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetProduct method. " + ex.Message);
+            }
+        }
     }
 }

@@ -28,33 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             buttonBack = new Button();
             groupBox4 = new GroupBox();
             groupBox5 = new GroupBox();
             buttonDeleteOrder = new Button();
             groupBox3 = new GroupBox();
             label4 = new Label();
-            comboBoxOrderDelivered = new ComboBox();
+            comboBoxOrdersToDeliver = new ComboBox();
             buttonConfirmOrderDelivered = new Button();
             groupBox1 = new GroupBox();
             label2 = new Label();
-            comboBoxOrderSent = new ComboBox();
-            buttonConfirmOrderSent = new Button();
+            comboBoxOrdersToApprove = new ComboBox();
+            buttonApproveOrder = new Button();
             groupBox2 = new GroupBox();
-            numericUpDown1QuantityOrders = new NumericUpDown();
+            checkBoxNewOrder = new CheckBox();
+            label3 = new Label();
+            comboBoxCustomer = new ComboBox();
+            numericUpDownQuantity = new NumericUpDown();
             label5 = new Label();
             label1 = new Label();
             comboBoxProducts = new ComboBox();
-            buttonAddOrder = new Button();
+            buttonAddOrderDetail = new Button();
             dataGridViewOrders = new DataGridView();
+            label7 = new Label();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1QuantityOrders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             SuspendLayout();
             // 
@@ -81,6 +85,7 @@
             groupBox4.Size = new Size(444, 408);
             groupBox4.TabIndex = 9;
             groupBox4.TabStop = false;
+            groupBox4.Enter += groupBox4_Enter;
             // 
             // groupBox5
             // 
@@ -107,14 +112,14 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(label4);
-            groupBox3.Controls.Add(comboBoxOrderDelivered);
+            groupBox3.Controls.Add(comboBoxOrdersToDeliver);
             groupBox3.Controls.Add(buttonConfirmOrderDelivered);
             groupBox3.Location = new Point(6, 320);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(432, 73);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
-            groupBox3.Text = "ORDER DELIVERED";
+            groupBox3.Text = "DELIVER ORDER";
             // 
             // label4
             // 
@@ -125,15 +130,15 @@
             label4.TabIndex = 4;
             label4.Text = "ORDER ID :";
             // 
-            // comboBoxOrderDelivered
+            // comboBoxOrdersToDeliver
             // 
-            comboBoxOrderDelivered.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxOrderDelivered.FormattingEnabled = true;
-            comboBoxOrderDelivered.Location = new Point(152, 28);
-            comboBoxOrderDelivered.Name = "comboBoxOrderDelivered";
-            comboBoxOrderDelivered.Size = new Size(121, 23);
-            comboBoxOrderDelivered.TabIndex = 3;
-            comboBoxOrderDelivered.SelectedIndexChanged += comboBoxOrderDelivered_SelectedIndexChanged;
+            comboBoxOrdersToDeliver.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxOrdersToDeliver.FormattingEnabled = true;
+            comboBoxOrdersToDeliver.Location = new Point(152, 28);
+            comboBoxOrdersToDeliver.Name = "comboBoxOrdersToDeliver";
+            comboBoxOrdersToDeliver.Size = new Size(121, 23);
+            comboBoxOrdersToDeliver.TabIndex = 3;
+            comboBoxOrdersToDeliver.SelectedIndexChanged += comboBoxOrderDelivered_SelectedIndexChanged;
             // 
             // buttonConfirmOrderDelivered
             // 
@@ -150,14 +155,14 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(comboBoxOrderSent);
-            groupBox1.Controls.Add(buttonConfirmOrderSent);
+            groupBox1.Controls.Add(comboBoxOrdersToApprove);
+            groupBox1.Controls.Add(buttonApproveOrder);
             groupBox1.Location = new Point(6, 234);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(432, 80);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "ORDER SENT";
+            groupBox1.Text = "APPROVE ORDER";
             // 
             // label2
             // 
@@ -168,53 +173,87 @@
             label2.TabIndex = 4;
             label2.Text = "ORDER ID :";
             // 
-            // comboBoxOrderSent
+            // comboBoxOrdersToApprove
             // 
-            comboBoxOrderSent.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxOrderSent.FormattingEnabled = true;
-            comboBoxOrderSent.Location = new Point(152, 28);
-            comboBoxOrderSent.Name = "comboBoxOrderSent";
-            comboBoxOrderSent.Size = new Size(121, 23);
-            comboBoxOrderSent.TabIndex = 3;
-            comboBoxOrderSent.SelectedIndexChanged += comboBoxOrderSent_SelectedIndexChanged;
+            comboBoxOrdersToApprove.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxOrdersToApprove.FormattingEnabled = true;
+            comboBoxOrdersToApprove.Location = new Point(152, 28);
+            comboBoxOrdersToApprove.Name = "comboBoxOrdersToApprove";
+            comboBoxOrdersToApprove.Size = new Size(121, 23);
+            comboBoxOrdersToApprove.TabIndex = 3;
+            comboBoxOrdersToApprove.SelectedIndexChanged += comboBoxOrderSent_SelectedIndexChanged;
             // 
-            // buttonConfirmOrderSent
+            // buttonApproveOrder
             // 
-            buttonConfirmOrderSent.BackColor = SystemColors.ActiveCaption;
-            buttonConfirmOrderSent.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            buttonConfirmOrderSent.Location = new Point(311, 22);
-            buttonConfirmOrderSent.Name = "buttonConfirmOrderSent";
-            buttonConfirmOrderSent.Size = new Size(115, 31);
-            buttonConfirmOrderSent.TabIndex = 2;
-            buttonConfirmOrderSent.Text = "CONFIRM";
-            buttonConfirmOrderSent.UseVisualStyleBackColor = false;
-            buttonConfirmOrderSent.Click += buttonConfirmOrderSent_Click;
+            buttonApproveOrder.BackColor = SystemColors.ActiveCaption;
+            buttonApproveOrder.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            buttonApproveOrder.Location = new Point(311, 22);
+            buttonApproveOrder.Name = "buttonApproveOrder";
+            buttonApproveOrder.Size = new Size(115, 31);
+            buttonApproveOrder.TabIndex = 2;
+            buttonApproveOrder.Text = "APPROVE";
+            buttonApproveOrder.UseVisualStyleBackColor = false;
+            buttonApproveOrder.Click += buttonConfirmOrderSent_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(numericUpDown1QuantityOrders);
+            groupBox2.Controls.Add(checkBoxNewOrder);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(comboBoxCustomer);
+            groupBox2.Controls.Add(numericUpDownQuantity);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(comboBoxProducts);
-            groupBox2.Controls.Add(buttonAddOrder);
+            groupBox2.Controls.Add(buttonAddOrderDetail);
             groupBox2.Location = new Point(6, 22);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(432, 127);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
-            groupBox2.Text = "ADD THE PRODUCTS";
+            groupBox2.Text = "ADD PRODUCTS";
             // 
-            // numericUpDown1QuantityOrders
+            // checkBoxNewOrder
             // 
-            numericUpDown1QuantityOrders.Location = new Point(152, 79);
-            numericUpDown1QuantityOrders.Name = "numericUpDown1QuantityOrders";
-            numericUpDown1QuantityOrders.Size = new Size(121, 23);
-            numericUpDown1QuantityOrders.TabIndex = 6;
+            checkBoxNewOrder.AutoSize = true;
+            checkBoxNewOrder.Checked = true;
+            checkBoxNewOrder.CheckState = CheckState.Checked;
+            checkBoxNewOrder.Location = new Point(301, 67);
+            checkBoxNewOrder.Name = "checkBoxNewOrder";
+            checkBoxNewOrder.Size = new Size(83, 19);
+            checkBoxNewOrder.TabIndex = 9;
+            checkBoxNewOrder.Text = "New Order";
+            checkBoxNewOrder.UseVisualStyleBackColor = true;
+            checkBoxNewOrder.CheckedChanged += checkBoxNewOrder_CheckedChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(314, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 15);
+            label3.TabIndex = 8;
+            label3.Text = "CUSTOMER:";
+            // 
+            // comboBoxCustomer
+            // 
+            comboBoxCustomer.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxCustomer.FormattingEnabled = true;
+            comboBoxCustomer.Location = new Point(291, 38);
+            comboBoxCustomer.Name = "comboBoxCustomer";
+            comboBoxCustomer.Size = new Size(121, 23);
+            comboBoxCustomer.TabIndex = 7;
+            // 
+            // numericUpDownQuantity
+            // 
+            numericUpDownQuantity.Location = new Point(152, 38);
+            numericUpDownQuantity.Name = "numericUpDownQuantity";
+            numericUpDownQuantity.Size = new Size(121, 23);
+            numericUpDownQuantity.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(80, 81);
+            label5.Location = new Point(180, 20);
             label5.Name = "label5";
             label5.Size = new Size(66, 15);
             label5.TabIndex = 5;
@@ -223,7 +262,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(14, 31);
+            label1.Location = new Point(14, 19);
             label1.Name = "label1";
             label1.Size = new Size(132, 15);
             label1.TabIndex = 4;
@@ -233,22 +272,23 @@
             // 
             comboBoxProducts.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxProducts.FormattingEnabled = true;
-            comboBoxProducts.Location = new Point(152, 28);
+            comboBoxProducts.Location = new Point(14, 38);
             comboBoxProducts.Name = "comboBoxProducts";
             comboBoxProducts.Size = new Size(121, 23);
             comboBoxProducts.TabIndex = 3;
+            comboBoxProducts.SelectedIndexChanged += comboBoxProducts_SelectedIndexChanged;
             // 
-            // buttonAddOrder
+            // buttonAddOrderDetail
             // 
-            buttonAddOrder.BackColor = SystemColors.ActiveCaption;
-            buttonAddOrder.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            buttonAddOrder.Location = new Point(311, 28);
-            buttonAddOrder.Name = "buttonAddOrder";
-            buttonAddOrder.Size = new Size(115, 31);
-            buttonAddOrder.TabIndex = 2;
-            buttonAddOrder.Text = "ADD";
-            buttonAddOrder.UseVisualStyleBackColor = false;
-            buttonAddOrder.Click += buttonAddOrder_Click;
+            buttonAddOrderDetail.BackColor = SystemColors.ActiveCaption;
+            buttonAddOrderDetail.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            buttonAddOrderDetail.Location = new Point(155, 79);
+            buttonAddOrderDetail.Name = "buttonAddOrderDetail";
+            buttonAddOrderDetail.Size = new Size(115, 31);
+            buttonAddOrderDetail.TabIndex = 2;
+            buttonAddOrderDetail.Text = "ADD";
+            buttonAddOrderDetail.UseVisualStyleBackColor = false;
+            buttonAddOrderDetail.Click += buttonAddOrder_Click;
             // 
             // dataGridViewOrders
             // 
@@ -257,23 +297,23 @@
             dataGridViewOrders.AllowUserToResizeColumns = false;
             dataGridViewOrders.AllowUserToResizeRows = false;
             dataGridViewOrders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridViewOrders.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewOrders.Location = new Point(12, 12);
             dataGridViewOrders.MultiSelect = false;
             dataGridViewOrders.Name = "dataGridViewOrders";
@@ -282,12 +322,23 @@
             dataGridViewOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewOrders.Size = new Size(444, 174);
             dataGridViewOrders.TabIndex = 8;
+            dataGridViewOrders.DoubleClick += dataGridViewOrders_DoubleClick;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(122, 189);
+            label7.Name = "label7";
+            label7.Size = new Size(217, 15);
+            label7.TabIndex = 10;
+            label7.Text = "DOUBLE CLICK RECORD TO SEE DETAILS";
             // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(468, 671);
+            Controls.Add(label7);
             Controls.Add(buttonBack);
             Controls.Add(groupBox4);
             Controls.Add(dataGridViewOrders);
@@ -295,7 +346,6 @@
             Name = "OrderForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "OrderForm";
-            WindowState = FormWindowState.Minimized;
             Load += OrderForm_Load;
             groupBox4.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
@@ -305,9 +355,10 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1QuantityOrders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -316,22 +367,26 @@
         private GroupBox groupBox4;
         private GroupBox groupBox3;
         private Label label4;
-        private ComboBox comboBoxOrderDelivered;
+        private ComboBox comboBoxOrdersToDeliver;
         private Button buttonConfirmOrderDelivered;
         private GroupBox groupBox1;
         private Label label2;
-        private ComboBox comboBoxOrderSent;
-        private Button buttonConfirmOrderSent;
+        private ComboBox comboBoxOrdersToApprove;
+        private Button buttonApproveOrder;
         private GroupBox groupBox2;
         private Label label1;
         private ComboBox comboBoxProducts;
-        private Button buttonAddOrder;
+        private Button buttonAddOrderDetail;
         private DataGridView dataGridViewOrders;
         private GroupBox groupBox5;
         private Label label6;
         private ComboBox comboBox1;
         private Button buttonDeleteOrder;
-        private NumericUpDown numericUpDown1QuantityOrders;
+        private NumericUpDown numericUpDownQuantity;
         private Label label5;
+        private CheckBox checkBoxNewOrder;
+        private Label label3;
+        private ComboBox comboBoxCustomer;
+        private Label label7;
     }
 }
