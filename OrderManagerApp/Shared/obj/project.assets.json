@@ -656,23 +656,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\krzys\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
+      "projectUniqueName": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
-      "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
-      "outputPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
+      "projectPath": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\Shared.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -687,8 +687,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Repo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
+            "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -723,8 +723,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\ForkRepo\\ADO.NET-classes\\OrderManagerApp\\Shared\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

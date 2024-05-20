@@ -11,10 +11,12 @@ namespace Logic.Services.Interfaces
     {
         List<int> GetMissingOrderIdsInPayments();
         public List<Order> GetAllOrders();
-        public void AddToOrder(Order order);
-        public void DeleteOrder(int Id);
         public void ChangeStatus(Order order);
         Order GetOrderByPaymentId(int paymentId);
+        public void AddToOrder(Order order);
+        public void DeleteOrder(int Id);
+        
+        
 
     }
 }

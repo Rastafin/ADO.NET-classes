@@ -66,7 +66,6 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-
                     string sql = "SELECT * FROM Orders";
 
                     using (var command = new SqlCommand(sql, connection))
@@ -74,6 +73,7 @@ namespace DataAccess.Repositories
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Orders");
+
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
                             int id = (int)row["Id"];
@@ -141,7 +141,9 @@ namespace DataAccess.Repositories
             }
         }
 
+
         public void AddToOrder(Order order)
+
         {
             try
             {
@@ -252,8 +254,10 @@ namespace DataAccess.Repositories
             catch (Exception ex)
             {
                 throw new Exception("An error occurred while trying to update order. " + ex.Message);
+
+
             }
-}
+        }
     }
 }
 
