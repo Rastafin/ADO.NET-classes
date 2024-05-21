@@ -1,42 +1,42 @@
 -- 1. Products
 CREATE TABLE Products (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(255),
-    Price DECIMAL(10, 2),
-    StockQuantity INT
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Name NVARCHAR(255) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    StockQuantity INT NOT NULL
 );
 
 -- 2. Customers
 CREATE TABLE Customers (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    FirstName NVARCHAR(100),
-    LastName NVARCHAR(100),
-    Email NVARCHAR(255)
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    FirstName NVARCHAR(100) NOT NULL,
+    LastName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(255) NOT NULL
 );
 
 -- 3. Orders
 CREATE TABLE Orders (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    CustomerId INT FOREIGN KEY REFERENCES Customers(Id),
-    OrderDate DATETIME,
-    Status Int
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    CustomerId INT FOREIGN KEY REFERENCES Customers(Id) NOT NULL,
+    OrderDate DATETIME NOT NULL,
+    Status Int NOT NULL
 );
 
 -- 4. OrderDetails
 CREATE TABLE OrderDetails (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    OrderId INT FOREIGN KEY REFERENCES Orders(Id),
-    ProductId INT FOREIGN KEY REFERENCES Products(Id),
-    Quantity INT
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    OrderId INT FOREIGN KEY REFERENCES Orders(Id) NOT NULL,
+    ProductId INT FOREIGN KEY REFERENCES Products(Id) NOT NULL,
+    Quantity INT NOT NULL
 );
 
 -- 5. Payments
 CREATE TABLE Payments (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    OrderId INT FOREIGN KEY REFERENCES Orders(Id),
-    Amount DECIMAL(10, 2),
-    PaymentDate DATETIME,
-    Status Int
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    OrderId INT FOREIGN KEY REFERENCES Orders(Id) NOT NULL,
+    Amount DECIMAL(10, 2) NOT NULL,
+    PaymentDate DATETIME NOT NULL,
+    Status Int NOT NULL
 );
 
 
