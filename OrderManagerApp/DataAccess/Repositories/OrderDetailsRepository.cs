@@ -120,5 +120,46 @@ namespace DataAccess.Repositories
                 }
             }
         }
+
+        public OrderDetails GetOrderDetails (int orderDetailsId)
+        {
+            try
+            {
+                using (var connection = _connectionFactory.CreateConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM OrderDetails WHERE Id = @OrderDetailsId";
+
+                    using (var command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderDetailsId", orderDetailsId);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        adapter.Fill(dataSet, "OrderDetails");
+
+                        if (dataSet.Tables["OrderDetails"]!.Rows.Count > 0)
+                        {
+                            DataRow row = dataSet.Tables["OrderDetails"]!.Rows[0];
+
+                            int id = (int)row["Id"];
+                            int orderId = (int)row["OrderId"];
+                            int productId = (int)row["ProductId"];
+                            int quantity = (int)row["Quantity"];
+
+                            return new OrderDetails(id, orderId, productId, quantity);
+                        }
+                        else
+                        {
+                            throw new Exception($"OrderDetails with Id: {orderDetailsId} cannot be found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while trying to get orderDetails with Id: {orderDetailsId}. " + ex.Message);
+            }
+        }
     }
 }
