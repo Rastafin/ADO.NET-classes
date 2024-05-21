@@ -12,5 +12,6 @@ namespace DataAccess.Repositories.Interfaces
         void AddOrderDetails(OrderDetails orderDetails);
         List<OrderDetails> GetOrderDetailsForOrder(int orderId);
         void DeleteOrderDetails(int orderDetailsId);
+        OrderDetails GetOrderDetails(int orderDetailsId);
     }
 }

@@ -110,3 +110,4 @@ C:\Repo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.OrderForm.resources
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.ProductsForm.resources
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.OrderDetailsListForm.resources
+C:\Repo\ADO.NET-classes\OrderManagerApp\OrderManagerApp\obj\Debug\net8.0-windows\GUI.OrderDetailsListForm.resources

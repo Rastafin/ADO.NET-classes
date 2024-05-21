@@ -294,7 +294,7 @@ namespace DataAccess.Repositories
                         }
                         else
                         {
-                            throw new Exception($"Payment with Id: {orderId} cannot be found.");
+                            throw new Exception($"Order with Id: {orderId} cannot be found.");
                         }
                     }
                 }

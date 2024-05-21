@@ -13,12 +13,17 @@ namespace Logic.Services
     public class OrderDetailsService() : IOrderDetailsService
     {
         private readonly IOrderDetailsRepository _orderDetailsRepository = new OrderDetailsRepository();
+        private readonly IProductRepository _productRepository = new ProductRepository();
 
         public void AddOrderDetails(OrderDetails orderDetails)
         {
             try
             {
                 _orderDetailsRepository.AddOrderDetails(orderDetails);
+
+                Product product = _productRepository.GetProduct(orderDetails.ProductId);
+                product.StockQuantity -= orderDetails.Quantity;
+                _productRepository.UpdateProduct(product);
             }
             catch (Exception ex)
             {
@@ -30,7 +35,12 @@ namespace Logic.Services
         {
             try
             {
-                _orderDetailsRepository.DeleteOrderDetails(orderDetailsId);
+                OrderDetails orderDetails = _orderDetailsRepository.GetOrderDetails(orderDetailsId);
+                Product product = (_productRepository.GetProduct(orderDetails.ProductId));
+                product.StockQuantity += orderDetails.Quantity;
+                _productRepository.UpdateProduct(product);
+
+                _orderDetailsRepository.DeleteOrderDetails(orderDetailsId);           
             }
             catch (Exception ex)
             {
