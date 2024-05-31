@@ -39,7 +39,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["ProductId"];
                             string Name = (string)row["Name"];
                             decimal Price = (decimal)row["Price"];
                             int StockQuantity = (int)row["StockQuantity"];
@@ -66,7 +66,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Products WHERE Id = @ProductId";
+                    string sql = "SELECT * FROM Products WHERE ProductId = @ProductId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -80,7 +80,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["Product"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["ProductId"];
                             string name = (string)row["Name"];
                             decimal price = (decimal)row["Price"];
                             int stockQuantity = (int)row["StockQuantity"];
@@ -119,7 +119,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["ProductId"];
                             string Name = (string)row["Name"];
                             decimal Price = (decimal)row["Price"];
                             int StockQuantity = (int)row["StockQuantity"];
@@ -183,11 +183,11 @@ namespace DataAccess.Repositories
                 {
 
                     connection.Open();
-                    string query = "SELECT * FROM PRODUCTS WHERE Id = @Id";
+                    string query = "SELECT * FROM PRODUCTS WHERE ProductId = @Id";
 
                     using (var command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", product.Id);
+                        command.Parameters.AddWithValue("@Id", product.ProductId);
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataSet dataSet = new DataSet();
                         adapter.Fill(dataSet, "Products");
@@ -222,45 +222,32 @@ namespace DataAccess.Repositories
 
         public void DeleteProduct(int productId)
         {
-            try
+            using (var connection = _connectionFactory.CreateConnection())
             {
-                using (var connection = _connectionFactory.CreateConnection())
+                connection.Open();
+
+                string query = "SELECT * FROM Products WHERE ProductId= @Id ";
+
+                using (var command = new SqlCommand(query, connection))
                 {
-                    connection.Open();
+                    command.Parameters.AddWithValue("@Id", productId);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    adapter.Fill(dataSet, "Products");
 
-                    string query = "SELECT * FROM Products WHERE Id= @Id ";
 
-                    using (var command = new SqlCommand(query, connection))
+                    if (dataSet.Tables["Products"]!.Rows.Count == 1)
                     {
-                        command.Parameters.AddWithValue("@Id", productId);
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataSet dataSet = new DataSet();
-                        adapter.Fill(dataSet, "Products");
+                        dataSet.Tables["Products"]!.Rows[0].Delete();
 
-
-                        if (dataSet.Tables["Products"]!.Rows.Count == 1)
-                        {
-                            dataSet.Tables["Products"]!.Rows[0].Delete();
-
-                            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-                            adapter.Update(dataSet, "Products");
-                        }
-                        else
-                        {
-                            throw new Exception("Product with specified ID not found.");
-                        }
-
-
-
+                        SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                        adapter.Update(dataSet, "Products");
                     }
-
-
+                    else
+                    {
+                        throw new Exception("Product with specified ID not found.");
+                    }
                 }
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while trying to delete product." + ex.Message);
             }
         }
     }

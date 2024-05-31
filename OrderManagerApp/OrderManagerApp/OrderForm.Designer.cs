@@ -85,7 +85,6 @@
             groupBox4.Size = new Size(444, 408);
             groupBox4.TabIndex = 9;
             groupBox4.TabStop = false;
-            groupBox4.Enter += groupBox4_Enter;
             // 
             // groupBox5
             // 
@@ -138,7 +137,6 @@
             comboBoxOrdersToDeliver.Name = "comboBoxOrdersToDeliver";
             comboBoxOrdersToDeliver.Size = new Size(121, 23);
             comboBoxOrdersToDeliver.TabIndex = 3;
-            comboBoxOrdersToDeliver.SelectedIndexChanged += comboBoxOrderDelivered_SelectedIndexChanged;
             // 
             // buttonConfirmOrderDelivered
             // 
@@ -181,7 +179,6 @@
             comboBoxOrdersToApprove.Name = "comboBoxOrdersToApprove";
             comboBoxOrdersToApprove.Size = new Size(121, 23);
             comboBoxOrdersToApprove.TabIndex = 3;
-            comboBoxOrdersToApprove.SelectedIndexChanged += comboBoxOrderSent_SelectedIndexChanged;
             // 
             // buttonApproveOrder
             // 

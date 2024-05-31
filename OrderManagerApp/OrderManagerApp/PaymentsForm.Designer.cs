@@ -99,7 +99,6 @@
             groupBox4.Size = new Size(444, 392);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
-            groupBox4.Enter += groupBox4_Enter;
             // 
             // groupBox3
             // 
@@ -167,7 +166,6 @@
             numericUpDownSettlePaymentAmount.Size = new Size(120, 23);
             numericUpDownSettlePaymentAmount.TabIndex = 6;
             numericUpDownSettlePaymentAmount.TextAlign = HorizontalAlignment.Center;
-            numericUpDownSettlePaymentAmount.ValueChanged += numericUpDownSettlePaymentAmount_ValueChanged;
             // 
             // label3
             // 

@@ -28,14 +28,7 @@ namespace Logic.Services
 
         public void DeleteProduct(int productId)
         {
-            try
-            {
-                _productRepository.DeleteProduct(productId);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred in DeleteProduct method. " + ex.Message);
-            }
+            _productRepository.DeleteProduct(productId);
         }
 
         public List<Product> GetAllProducts()

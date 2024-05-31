@@ -8,14 +8,14 @@ namespace DataAccess.Models
 {
     public class OrderDetails
     {
-        public int Id { get; set; }
+        public int OrderDetailsId { get; set; }
         public int OrderId { get; set; } 
         public int ProductId { get; set; } 
         public int Quantity { get; set; }
 
         public OrderDetails(int id, int orderId, int productId, int quantity)
         {
-            Id = id;
+            OrderDetailsId = id;
             OrderId = orderId;
             ProductId = productId;
             Quantity = quantity;

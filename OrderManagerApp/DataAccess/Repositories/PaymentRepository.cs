@@ -22,9 +22,9 @@ namespace DataAccess.Repositories
             {
                 string sql = @"SELECT SUM(Products.Price * OrderDetails.Quantity) 
                        FROM Orders
-                       JOIN OrderDetails ON Orders.Id = OrderDetails.OrderId
-                       JOIN Products ON OrderDetails.ProductId = Products.Id
-                       WHERE Orders.Id = @OrderId";
+                       JOIN OrderDetails ON Orders.OrderId = OrderDetails.OrderId
+                       JOIN Products ON OrderDetails.ProductId = Products.ProductId
+                       WHERE Orders.OrderId = @OrderId";
 
                 using (var connection = _connectionFactory.CreateConnection())
                 {
@@ -70,7 +70,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["PaymentId"];
                             int orderId = (int)row["OrderId"];
                             decimal amount = (decimal)row["Amount"];
                             DateTime paymentDate = (DateTime)row["PaymentDate"];
@@ -125,7 +125,7 @@ namespace DataAccess.Repositories
             }
         }
 
-        public List<int> GetPaymentIdsWithStatusWiting()
+        public List<int> GetPaymentIdsWithStatusWaiting()
         {
             List<int> paymentIds = new List<int>();
 
@@ -135,7 +135,7 @@ namespace DataAccess.Repositories
                 {
                     connection.Open();
 
-                    string sql = "SELECT Id FROM Payments WHERE Status = @Status";
+                    string sql = "SELECT PaymentId FROM Payments WHERE Status = @Status";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -147,7 +147,7 @@ namespace DataAccess.Repositories
 
                         foreach(DataRow row in dataSet.Tables[0].Rows)
                         {
-                            paymentIds.Add((int)row["Id"]);
+                            paymentIds.Add((int)row["PaymentId"]);
                         }
                     }
                 }
@@ -167,7 +167,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Payments WHERE Id = @PaymentId";
+                    string sql = "SELECT * FROM Payments WHERE PaymentId = @PaymentId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -219,7 +219,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT Amount FROM Payments WHERE Id = @PaymentId";
+                    string sql = "SELECT Amount FROM Payments WHERE PaymentId = @PaymentId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -253,7 +253,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Payments WHERE Id = @PaymentId";
+                    string sql = "SELECT * FROM Payments WHERE PaymentId = @PaymentId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -267,7 +267,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["Payment"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["PaymentId"];
                             int orderId = (int)row["OrderId"];
                             decimal amount = (decimal)row["Amount"];
                             DateTime paymentDate = (DateTime)row["PaymentDate"];
@@ -295,11 +295,11 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Payments WHERE Id = @Id";
+                    string sql = "SELECT * FROM Payments WHERE PaymentId = @Id";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", payment.Id);
+                        command.Parameters.AddWithValue("@Id", payment.PaymentId);
 
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
 

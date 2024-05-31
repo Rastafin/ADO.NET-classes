@@ -12,7 +12,7 @@ namespace DataAccess.Repositories.Interfaces
         decimal CalculateTotalAmountForOrder(int orderId);
         List<Payment> GetAllPayments();
         void AddPayment(Payment payment);
-        List<int> GetPaymentIdsWithStatusWiting();
+        List<int> GetPaymentIdsWithStatusWaiting();
         void SettlePayment(int paymentId, decimal amount);
         decimal GetMaxSettlementAmount(int paymentId);
         Payment GetPaymentById(int paymentId);

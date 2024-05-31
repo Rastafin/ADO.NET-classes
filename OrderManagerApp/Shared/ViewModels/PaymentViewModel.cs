@@ -9,7 +9,7 @@ namespace Shared.ViewModels
 {
     public class PaymentViewModel
     {
-        public int Id { get; set; }
+        public int PaymentId { get; set; }
         public string? CustomerName { get; set; }
         public decimal Amount { get; set; }
         public DateTime PaymentDate { get; set; }

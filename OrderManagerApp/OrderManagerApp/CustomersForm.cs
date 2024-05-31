@@ -32,7 +32,7 @@ namespace GUI
             {
                 dataGridViewCustomers.DataSource = _customerService.GetAllCustomers();
 
-                dataGridViewCustomers.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewCustomers.Columns["CustomerId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewCustomers.Columns["FirstName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewCustomers.Columns["LastName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
@@ -45,11 +45,6 @@ namespace GUI
         private void CustomersForm_Load(object sender, EventArgs e)
         {
             refreshDGV();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -119,23 +114,17 @@ namespace GUI
                 {
                     DataGridViewRow selectedRow = dataGridViewCustomers.SelectedRows[0];
 
-                    if (selectedRow.Cells["Id"].Value == null)
+                    if (selectedRow.Cells["CustomerId"].Value == null)
                     {
                         throw new Exception("Selected user data is incomplete.");
                     }
 
-                    int customerId = (int)selectedRow.Cells["Id"].Value;
+                    int customerId = (int)selectedRow.Cells["CustomerId"].Value;
                     string? existingEmail = selectedRow.Cells["Email"].Value.ToString();
 
                     string firstName = textBoxEditFirstName.Text;
                     string lastName = textBoxEditLastName.Text;
                     string newEmail = textBoxEditEmail.Text;
-
-                    /*if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
-                    {
-                        MessageBox.Show("Not every form field is filled.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }*/
 
                     if (customerId < 1)
                     {
@@ -173,12 +162,12 @@ namespace GUI
                 {
                     DataGridViewRow selectedRow = dataGridViewCustomers.SelectedRows[0];
 
-                    if (selectedRow.Cells["Id"].Value == null)
+                    if (selectedRow.Cells["CustomerId"].Value == null)
                     {
                         throw new Exception("Selected user data is incomplete.");
                     }
 
-                    int customerId = (int)selectedRow.Cells["Id"].Value;
+                    int customerId = (int)selectedRow.Cells["CustomerId"].Value;
 
                     if (customerId < 1)
                     {
@@ -200,11 +189,6 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Shared.ViewModels
 {
     public class OrderViewModel
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
         public string? CustomerName { get; set; }
         public DateTime OrderDate { get; set; }
         public OrderStatus Status { get; set; }

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -25,19 +26,13 @@ namespace GUI
             _productService = new ProductService();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
         private void refreshDGV()
         {
             try
             {
                 dataGridViewProducts.DataSource = _productService.GetAllProducts();
-                dataGridViewProducts.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                //dataGridViewProducts.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                //dataGridViewProducts.Columns["Price"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                //dataGridViewProducts.Columns["StockQuantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewProducts.Columns["ProductId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
@@ -91,12 +86,12 @@ namespace GUI
                 {
                     DataGridViewRow selectedRow = dataGridViewProducts.SelectedRows[0];
 
-                    if (selectedRow.Cells["Id"].Value == null)
+                    if (selectedRow.Cells["ProductId"].Value == null)
                     {
                         throw new Exception("Selected product data is incomplete.");
                     }
 
-                    int productId = (int)selectedRow.Cells["Id"].Value;
+                    int productId = (int)selectedRow.Cells["ProductId"].Value;
                     string Name = textBoxEditName.Text;
                     decimal Price = numericUpDown3PriceEdit.Value;
                     int StockQuantity = (int)numericUpDown4StockQunatityEdit.Value;
@@ -155,7 +150,6 @@ namespace GUI
                 }
             }
         }
-
         private void buttonDeleteProduct_Click(object sender, EventArgs e)
         {
             try
@@ -164,12 +158,12 @@ namespace GUI
                 {
                     DataGridViewRow selectedRow = dataGridViewProducts.SelectedRows[0];
 
-                    if (selectedRow.Cells["Id"].Value == null)
+                    if (selectedRow.Cells["ProductId"].Value == null)
                     {
                         throw new Exception("Selected product data is incomplete.");
                     }
 
-                    int productId = (int)selectedRow.Cells["Id"].Value;
+                    int productId = (int)selectedRow.Cells["ProductId"].Value;
 
                     if (productId < 1)
                     {
@@ -183,20 +177,14 @@ namespace GUI
                     MessageBox.Show("Product deleted successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            catch (SqlException)
+            {
+                MessageBox.Show($"This Product cannot be deleted. Please check if the product has an active order.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

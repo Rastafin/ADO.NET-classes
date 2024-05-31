@@ -71,7 +71,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderDetailsId"];
                             int orderIdFromRow = (int)row["OrderId"];
                             int productId = (int)row["ProductId"];
                             int quantity = (int)row["Quantity"];
@@ -95,7 +95,7 @@ namespace DataAccess.Repositories
             using (var connection = _connectionFactory.CreateConnection())
             {
                 connection.Open();
-                string sql = "SELECT * FROM OrderDetails WHERE Id = @Id";
+                string sql = "SELECT * FROM OrderDetails WHERE OrderDetailsId = @Id";
 
                 using (var command = new SqlCommand(sql, connection))
                 {
@@ -128,7 +128,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM OrderDetails WHERE Id = @OrderDetailsId";
+                    string sql = "SELECT * FROM OrderDetails WHERE OrderDetailsId = @OrderDetailsId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -142,7 +142,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["OrderDetails"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderDetailsId"];
                             int orderId = (int)row["OrderId"];
                             int productId = (int)row["ProductId"];
                             int quantity = (int)row["Quantity"];

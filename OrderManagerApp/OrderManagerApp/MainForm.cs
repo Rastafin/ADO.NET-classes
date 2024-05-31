@@ -14,11 +14,6 @@ namespace OrderManagerApp
             _customerService = new CustomerService();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();

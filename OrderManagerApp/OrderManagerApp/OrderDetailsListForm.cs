@@ -48,10 +48,5 @@ namespace GUI
         {
             Close();
         }
-
-        private void listBoxOrderDetailsList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

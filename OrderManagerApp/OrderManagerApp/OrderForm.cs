@@ -36,7 +36,7 @@ namespace GUI
             {
                 dataGridViewOrders.DataSource = _orderService.GetAllOrderViewModels();
 
-                dataGridViewOrders.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewOrders.Columns["OrderId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
                 dataGridViewOrders.Columns["CustomerName"].HeaderText = "Name";
                 dataGridViewOrders.Columns["OrderDate"].HeaderText = "Update Date";
@@ -50,7 +50,7 @@ namespace GUI
 
                 foreach (Product product in _productService.GetAllAvailableProducts())
                 {
-                    comboBoxProducts.Items.Add(new { Name = product.Name, Id = product.Id });
+                    comboBoxProducts.Items.Add(new { Name = product.Name, Id = product.ProductId });
                 }
 
                 comboBoxProducts.DisplayMember = "Name";
@@ -58,23 +58,39 @@ namespace GUI
 
                 foreach (Customer customer in _customerService.GetAllCustomers())
                 {
-                    comboBoxCustomer.Items.Add(new { Name = customer.FirstName + " " + customer.LastName, Id = customer.Id });
+                    comboBoxCustomer.Items.Add(new { Name = customer.FirstName + " " + customer.LastName, Id = customer.CustomerId });
                 }
 
                 comboBoxCustomer.DisplayMember = "Name";
                 comboBoxCustomer.ValueMember = "Id";
 
+
+
                 foreach(Order order in _orderService.GetAllOrders())
                 {
                     if(order.Status == OrderStatus.Processed)
                     {
-                        comboBoxOrdersToApprove.Items.Add(order.Id);
+                        var customer = _customerService.GetCustomerByOrderId(order.OrderId);
+                        comboBoxOrdersToApprove.Items.Add(new { Name = $"{order.OrderId} - {customer.FirstName} {customer.LastName}"
+                            , Id = order.OrderId });
                     }
                 }
 
+                comboBoxOrdersToApprove.DisplayMember = "Name";
+                comboBoxOrdersToApprove.ValueMember = "Id";
+
+
                 foreach(int orderId in _orderService.GetOrdersToDeliverIds())
                 {
-                    comboBoxOrdersToDeliver.Items.Add(orderId);
+                    var customer = _customerService.GetCustomerByOrderId(orderId);
+                    comboBoxOrdersToDeliver.Items.Add(new
+                    {
+                        Name = $"{orderId} - {customer.FirstName} {customer.LastName}",
+                        Id = orderId
+                    });
+
+                    comboBoxOrdersToDeliver.DisplayMember = "Name";
+                    comboBoxOrdersToDeliver.ValueMember = "Id";
                 }
             }
             catch (Exception ex)
@@ -119,9 +135,9 @@ namespace GUI
 
                     DataGridViewRow selectedRow = dataGridViewOrders.SelectedRows[0];
 
-                    if (selectedRow.Cells["Id"].Value == null) throw new Exception("Selected order data is incomplete.");
+                    if (selectedRow.Cells["OrderId"].Value == null) throw new Exception("Selected order data is incomplete.");
 
-                    int orderId = (int)selectedRow.Cells["Id"].Value;
+                    int orderId = (int)selectedRow.Cells["OrderId"].Value;
 
                     Order selectedOrder = _orderService.GetOrderById(orderId);
                     if(selectedOrder.Status != OrderStatus.Processed)
@@ -181,9 +197,9 @@ namespace GUI
 
                 DataGridViewRow selectedRow = dataGridViewOrders.SelectedRows[0];
 
-                if (selectedRow.Cells["Id"].Value == null) throw new Exception("Selected order data is incomplete.");
+                if (selectedRow.Cells["OrderId"].Value == null) throw new Exception("Selected order data is incomplete.");
 
-                int orderId = (int)selectedRow.Cells["Id"].Value;
+                int orderId = (int)selectedRow.Cells["OrderId"].Value;
 
                 if(_orderService.GetOrderById(orderId).Status != OrderStatus.Processed)
                 {
@@ -193,7 +209,7 @@ namespace GUI
 
                 foreach(OrderDetails orderDetail in _orderDetailsService.GetOrderDetailsForOrder(orderId))
                 {
-                    _orderDetailsService.DeleteOrderDetails(orderDetail.Id);
+                    _orderDetailsService.DeleteOrderDetails(orderDetail.OrderDetailsId);
                 }
 
                 _orderService.DeleteOrder(orderId);
@@ -219,7 +235,10 @@ namespace GUI
                     return;
                 }
 
-                _orderService.ChangeStatus(int.Parse(comboBoxOrdersToApprove.SelectedItem.ToString()!), OrderStatus.Approved);
+                dynamic order = comboBoxOrdersToApprove.SelectedItem;
+                int orderId = order.Id;
+
+                _orderService.ChangeStatus(orderId, OrderStatus.Approved);
 
                 refreshForm();
 
@@ -241,7 +260,10 @@ namespace GUI
                     return;
                 }
 
-                _orderService.ChangeStatus(int.Parse(comboBoxOrdersToDeliver.SelectedItem.ToString()!), OrderStatus.Delivered);
+                dynamic order = comboBoxOrdersToDeliver.SelectedItem;
+                int orderId = order.Id;
+
+                _orderService.ChangeStatus(orderId, OrderStatus.Delivered);
 
                 refreshForm();
 
@@ -253,24 +275,9 @@ namespace GUI
             }
         }
 
-        private void comboBoxOrderSent_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxOrderDelivered_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void OrderForm_Load(object sender, EventArgs e)
         {
             refreshForm();
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void comboBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
@@ -300,7 +307,7 @@ namespace GUI
         {
             if (dataGridViewOrders.CurrentRow != null)
             {
-                int orderId = Convert.ToInt32(dataGridViewOrders.CurrentRow.Cells["Id"].Value);
+                int orderId = Convert.ToInt32(dataGridViewOrders.CurrentRow.Cells["OrderId"].Value);
                 OrderDetailsListForm orderDetailsListForm = new OrderDetailsListForm(orderId);
                 orderDetailsListForm.Show();
             }

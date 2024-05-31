@@ -26,7 +26,7 @@ namespace DataAccess.Repositories
                 {
                     connection.Open();
 
-                    string ordersSql = "SELECT Id FROM Orders WHERE Status = 1";
+                    string ordersSql = "SELECT OrderId FROM Orders WHERE Status = 1";
                     DataTable ordersTable = new DataTable();
 
                     using (var ordersCommand = new SqlCommand(ordersSql, connection))
@@ -43,7 +43,7 @@ namespace DataAccess.Repositories
                         paymentsAdapter.Fill(paymentsTable);
                     }
 
-                    var allOrderIds = ordersTable.AsEnumerable().Select(r => r.Field<int>("Id"));
+                    var allOrderIds = ordersTable.AsEnumerable().Select(r => r.Field<int>("OrderId"));
                     var paymentsOrderIds = paymentsTable.AsEnumerable().Select(r => r.Field<int>("OrderId"));
                     missingOrderIds = allOrderIds.Except(paymentsOrderIds).ToList();
                 }
@@ -76,7 +76,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderId"];
                             int customerId = (int)row["CustomerId"];
                             DateTime dateTime = (DateTime)row["OrderDate"];
                             OrderStatus orderStatus = (OrderStatus)row["Status"];
@@ -105,8 +105,8 @@ namespace DataAccess.Repositories
                     connection.Open();
 
                     string sql = @"SELECT Orders.* FROM Orders
-                        INNER JOIN Payments ON Orders.Id = Payments.OrderId
-                        WHERE Payments.Id = @PaymentId;";
+                        INNER JOIN Payments ON Orders.OrderId = Payments.OrderId
+                        WHERE Payments.PaymentId = @PaymentId;";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -120,7 +120,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["Orders"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderId"];
                             int customerId = (int)row["CustomerId"];
                             DateTime orderDate = (DateTime)row["OrderDate"];
                             OrderStatus orderStatus = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
@@ -193,7 +193,7 @@ namespace DataAccess.Repositories
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM Orders WHERE Id= @Id ";
+                    string query = "SELECT * FROM Orders WHERE OrderId= @Id ";
 
                     using (var command = new SqlCommand(query, connection))
                     {
@@ -232,7 +232,7 @@ namespace DataAccess.Repositories
                 {
 
                     connection.Open();
-                    string query = "SELECT * FROM ORDERS WHERE Id = @Id";
+                    string query = "SELECT * FROM ORDERS WHERE OrderId = @Id";
 
                     using (var command = new SqlCommand(query, connection))
                     {
@@ -271,7 +271,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Orders WHERE Id = @OrderId";
+                    string sql = "SELECT * FROM Orders WHERE OrderId = @OrderId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -285,7 +285,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["Order"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderId"];
                             int customerId = (int)row["CustomerId"];
                             DateTime orderDate = (DateTime)row["OrderDate"];
                             OrderStatus status = (OrderStatus)Enum.Parse(typeof(OrderStatus), row["Status"].ToString()!);
@@ -315,7 +315,7 @@ namespace DataAccess.Repositories
                 {
                     connection.Open();
                     string sql = @"SELECT Orders.* FROM Orders
-                            INNER JOIN Payments ON Payments.OrderId = Orders.Id
+                            INNER JOIN Payments ON Payments.OrderId = Orders.OrderId
                             WHERE Payments.Status = 0 AND Orders.Status = 1;";
 
                     using (var command = new SqlCommand(sql, connection))
@@ -326,7 +326,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["OrderId"];
 
                             orderIds.Add(id);
                         }

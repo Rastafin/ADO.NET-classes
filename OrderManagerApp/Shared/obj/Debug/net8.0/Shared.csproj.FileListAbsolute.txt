@@ -3,7 +3,6 @@ C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\bin\Debug\net8.0\Shared.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\bin\Debug\net8.0\Shared.pdb
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\bin\Debug\net8.0\DataAccess.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\bin\Debug\net8.0\DataAccess.pdb
-C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\bin\Debug\net8.0\DataAccess.dll.config
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\obj\Debug\net8.0\Shared.csproj.AssemblyReference.cache
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache

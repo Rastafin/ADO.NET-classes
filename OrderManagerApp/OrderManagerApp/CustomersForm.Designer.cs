@@ -96,7 +96,6 @@
             groupBox1.Size = new Size(444, 389);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // groupBox4
             // 
@@ -107,7 +106,6 @@
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "DELETE CUSTOMER";
-            groupBox4.Enter += groupBox4_Enter;
             // 
             // buttonDeleteCustomer
             // 

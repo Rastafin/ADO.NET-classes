@@ -19,11 +19,13 @@ namespace GUI
     {
         private readonly IPaymentService _paymentService;
         private readonly IOrderService _orderService;
+        private readonly ICustomerService _customerService;
         public PaymentsForm()
         {
             InitializeComponent();
             _paymentService = new PaymentService();
             _orderService = new OrderService();
+            _customerService = new CustomerService();
         }
 
         private void PaymentsForm_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace GUI
             {
                 dataGridViewPayments.DataSource = _paymentService.GetAllPaymentsViewModel();
 
-                dataGridViewPayments.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dataGridViewPayments.Columns["PaymentId"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewPayments.Columns["Amount"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dataGridViewPayments.Columns["PaymentDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
@@ -50,17 +52,45 @@ namespace GUI
 
                 foreach (int id in _orderService.GetMissingOrderIdsInPayments())
                 {
-                    comboBoxOrdersId.Items.Add(id.ToString());
+                    var customer = _customerService.GetCustomerByOrderId(id);
+                    comboBoxOrdersId.Items.Add(new
+                    {
+                        Name = $"{id} - {customer.FirstName} {customer.LastName}"
+                            ,
+                        Id = id
+                    });
+
+                    comboBoxOrdersId.DisplayMember = "Name";
+                    comboBoxOrdersId.ValueMember = "Id";
                 }
 
                 foreach (int id in _paymentService.GetPaymentIdsWithStatusWiting())
                 {
-                    comboBoxSettlePaymentsId.Items.Add(id.ToString());
+                    var payment = _paymentService.GetPaymentById(id);
+                    var customer = _customerService.GetCustomerByOrderId(payment.OrderId);
+                    comboBoxSettlePaymentsId.Items.Add(new
+                    {
+                        Name = $"{id} - {customer.FirstName} {customer.LastName}"
+                            ,
+                        Id = id
+                    });
+
+                    comboBoxSettlePaymentsId.DisplayMember = "Name";
+                    comboBoxSettlePaymentsId.ValueMember = "Id";
                 }
 
                 foreach(Payment payment in _paymentService.GetAllPayments())
                 {
-                    comboBoxWithdrawPaymentsId.Items.Add(payment.Id);
+                    var customer = _customerService.GetCustomerByOrderId(payment.OrderId);
+                    comboBoxWithdrawPaymentsId.Items.Add(new
+                    {
+                        Name = $"{payment.PaymentId} - {customer.FirstName} {customer.LastName}"
+                            ,
+                        Id = payment.PaymentId
+                    });
+
+                    comboBoxWithdrawPaymentsId.DisplayMember = "Name";
+                    comboBoxWithdrawPaymentsId.ValueMember = "Id";
                 }
             }
             catch (Exception ex)
@@ -86,8 +116,11 @@ namespace GUI
                     return;
                 }
 
+                dynamic selectedItem = comboBoxOrdersId.SelectedItem;
+                int selectedOrderId = selectedItem.Id;
+
                 _paymentService.AddPayment(new Payment(
-                    int.Parse(comboBoxOrdersId.SelectedItem.ToString()!),
+                    selectedOrderId,
                     DateTime.Now,
                     PaymentStatus.Waiting
                     ));
@@ -112,10 +145,11 @@ namespace GUI
                     return;
                 }
 
-                int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem!.ToString()!);
+                dynamic selectedItem = comboBoxSettlePaymentsId.SelectedItem;
+
                 decimal settlementAmount = numericUpDownSettlePaymentAmount.Value;
 
-                _paymentService.SettlePayment(paymentId, settlementAmount);
+                _paymentService.SettlePayment(selectedItem.Id, settlementAmount);
 
                 refreshForm();
 
@@ -127,25 +161,15 @@ namespace GUI
             }
         }
 
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownSettlePaymentAmount_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBoxSettlePaymentsId_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 if (comboBoxSettlePaymentsId.SelectedItem != null)
                 {
-                    int paymentId = int.Parse(comboBoxSettlePaymentsId.SelectedItem.ToString()!);
+                    dynamic selectedItem = comboBoxSettlePaymentsId.SelectedItem;
 
-                    numericUpDownSettlePaymentAmount.Maximum = _paymentService.GetMaxSettlementAmount(paymentId);
+                    numericUpDownSettlePaymentAmount.Maximum = _paymentService.GetMaxSettlementAmount(selectedItem.Id);
                 }
             }
             catch (Exception ex)
@@ -165,18 +189,18 @@ namespace GUI
             {
                 if(comboBoxWithdrawPaymentsId.SelectedItem != null)
                 {
-                    int paymentId = (int)comboBoxWithdrawPaymentsId.SelectedItem;
+                    dynamic selectedItem = comboBoxWithdrawPaymentsId.SelectedItem;
 
-                    Payment payment = _paymentService.GetPaymentById(paymentId);
+                    Payment payment = _paymentService.GetPaymentById(selectedItem.Id);
 
-                    Order orderFromPaymentId = _orderService.GetOrderByPaymentId(paymentId);
+                    Order orderFromPaymentId = _orderService.GetOrderByPaymentId(selectedItem.Id);
                     if(orderFromPaymentId.Status == OrderStatus.Delivered)
                     {
                         MessageBox.Show("This payment cannot be withdrawn becouse the assigned order has already been delivered.", "Refusal", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         return;
                     }
 
-                    payment.Amount = _paymentService.CalculateTotalAmountForOrder(orderFromPaymentId.Id);
+                    payment.Amount = _paymentService.CalculateTotalAmountForOrder(orderFromPaymentId.OrderId);
                     payment.Status = PaymentStatus.Waiting;
                     payment.PaymentDate = DateTime.Now;
 

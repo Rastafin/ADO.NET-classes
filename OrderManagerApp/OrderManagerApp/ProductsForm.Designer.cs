@@ -78,7 +78,6 @@
             groupBox1.Size = new Size(444, 389);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // groupBox4
             // 
@@ -89,7 +88,6 @@
             groupBox4.TabIndex = 5;
             groupBox4.TabStop = false;
             groupBox4.Text = "DELETE PRODUCT";
-            groupBox4.Enter += groupBox4_Enter;
             // 
             // buttonDeleteProduct
             // 
@@ -237,7 +235,6 @@
             dataGridViewProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewProducts.Size = new Size(444, 174);
             dataGridViewProducts.TabIndex = 7;
-            dataGridViewProducts.CellContentClick += dataGridViewProducts_CellContentClick;
             dataGridViewProducts.SelectionChanged += dataGridViewProducts_SelectionChanged;
             // 
             // ProductsForm

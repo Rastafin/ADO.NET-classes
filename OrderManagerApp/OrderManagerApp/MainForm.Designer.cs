@@ -132,7 +132,6 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

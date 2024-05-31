@@ -54,5 +54,17 @@ namespace Logic.Services
         {
                 _customerRepository.DeleteCustomer(customerId);
         }
+
+        public Customer GetCustomerByOrderId(int orderId)
+        {
+            try
+            {
+                return _customerRepository.GetCustomerByOrderId(orderId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred in GetCustomerByOrderId method. " + ex.Message);
+            }
+        }
     }
 }

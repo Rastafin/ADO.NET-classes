@@ -66,7 +66,7 @@ namespace Logic.Services
 
                     PaymentViewModel paymentViewModel = new PaymentViewModel
                     {
-                        Id = payment.Id,
+                        PaymentId = payment.PaymentId,
                         Amount = payment.Amount,
                         PaymentDate = payment.PaymentDate,
                         Status = payment.Status,
@@ -112,7 +112,7 @@ namespace Logic.Services
         {
             try
             {
-                return _paymentRepository.GetPaymentIdsWithStatusWiting();
+                return _paymentRepository.GetPaymentIdsWithStatusWaiting();
             }
             catch (Exception ex)
             {

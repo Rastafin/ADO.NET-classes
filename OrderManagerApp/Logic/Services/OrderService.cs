@@ -75,11 +75,11 @@ namespace Logic.Services
 
                 foreach (Order order in orders)
                 {
-                    Customer customer = _customerRepository.GetCustomerByOrderId(order.Id);
+                    Customer customer = _customerRepository.GetCustomerByOrderId(order.OrderId);
 
                     OrderViewModel orderViewModel = new OrderViewModel
                     {
-                        Id = order.Id,
+                        OrderId = order.OrderId,
                         CustomerName = customer.FirstName + " " + customer.LastName,
                         OrderDate = order.OrderDate,
                         Status = order.Status

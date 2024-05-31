@@ -10,9 +10,7 @@ namespace DataAccess.Models
 {
     public class Product
     {
-        //private int stockQunatity;
-
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; } 
         public decimal Price { get; set; } 
         public int StockQuantity { get; set; } 
@@ -24,7 +22,7 @@ namespace DataAccess.Models
         }
         public Product(int id, string name, decimal price, int stockQuantity)
         {
-            Id = id;
+            ProductId = id;
             Name = name;
             Price = price;
             StockQuantity = stockQuantity;

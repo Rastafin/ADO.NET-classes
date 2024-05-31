@@ -11,7 +11,7 @@ namespace DataAccess.Models
 {
     public class Payment
     {
-        public int Id { get; set; }
+        public int PaymentId { get; set; }
         public int OrderId { get; set; }
         public decimal Amount { get; set; }
         public DateTime PaymentDate { get; set; }
@@ -30,7 +30,7 @@ namespace DataAccess.Models
 
         public Payment(int id, int orderId, decimal amount, DateTime paymentDate, PaymentStatus status)
         {
-            Id = id;
+            PaymentId = id;
             OrderId = orderId;
             Amount = amount;
             PaymentDate = paymentDate;

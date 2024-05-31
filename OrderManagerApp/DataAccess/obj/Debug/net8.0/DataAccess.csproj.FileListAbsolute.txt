@@ -1,4 +1,3 @@
-C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll.config
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.dll
 C:\ForkRepo\ADO.NET-classes\OrderManagerApp\DataAccess\bin\Debug\net8.0\DataAccess.pdb

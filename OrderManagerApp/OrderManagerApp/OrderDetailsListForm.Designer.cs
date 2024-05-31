@@ -42,7 +42,6 @@
             listBoxOrderDetailsList.Name = "listBoxOrderDetailsList";
             listBoxOrderDetailsList.Size = new Size(382, 254);
             listBoxOrderDetailsList.TabIndex = 0;
-            listBoxOrderDetailsList.SelectedIndexChanged += listBoxOrderDetailsList_SelectedIndexChanged;
             // 
             // buttonBack
             // 

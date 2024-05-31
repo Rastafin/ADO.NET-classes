@@ -34,7 +34,7 @@ namespace DataAccess.Repositories
 
                         foreach (DataRow row in dataSet.Tables[0].Rows)
                         {
-                            int id = (int)row["Id"];
+                            int id = (int)row["CustomerId"];
                             string firstName = (string)row["FirstName"];
                             string lastName = (string)row["LastName"];
                             string email = (string)row["Email"];
@@ -94,11 +94,11 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Customers WHERE Id = @Id";
+                    string sql = "SELECT * FROM Customers WHERE CustomerId = @Id";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@Id", customer.Id);
+                        command.Parameters.AddWithValue("@Id", customer.CustomerId);
 
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -133,7 +133,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Customers WHERE Id = @Id";
+                    string sql = "SELECT * FROM Customers WHERE CustomerId = @Id";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -166,7 +166,7 @@ namespace DataAccess.Repositories
                 using (var connection = _connectionFactory.CreateConnection())
                 {
                     connection.Open();
-                    string sql = "SELECT Customers.* FROM Customers JOIN Orders ON Customers.Id = Orders.CustomerId WHERE Orders.Id = @OrderId";
+                    string sql = "SELECT Customers.* FROM Customers JOIN Orders ON Customers.CustomerId = Orders.CustomerId WHERE Orders.OrderId = @OrderId";
 
                     using (var command = new SqlCommand(sql, connection))
                     {
@@ -180,7 +180,7 @@ namespace DataAccess.Repositories
                         {
                             DataRow row = dataSet.Tables["Customers"]!.Rows[0];
 
-                            int id = (int)row["Id"];
+                            int id = (int)row["CustomerId"];
                             string firstName = (string)row["FirstName"];
                             string lastName = (string)row["LastName"];
                             string email = (string)row["Email"];
